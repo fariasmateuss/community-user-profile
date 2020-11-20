@@ -1,7 +1,19 @@
 import React from 'react';
 
-function App() {
-  return <h1>Hello, World!</h1>;
-}
+import useProfileData from './hooks/user.hooks';
+
+import Header from './components/Header';
+
+const App: React.FC = () => {
+  const profile = useProfileData();
+
+  return (
+    <Header
+      name={profile?.name}
+      login={profile?.login}
+      avatar={profile?.avatar_url}
+    />
+  );
+};
 
 export default App;
