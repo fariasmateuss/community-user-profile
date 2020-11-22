@@ -1,19 +1,9 @@
 import React from 'react';
 
-import useProfileData from './hooks/user.hooks';
-
-import Header from './components/Header';
+import Router from './routes';
 
 const App: React.FC = () => {
-  const profile = useProfileData();
-
-  return (
-    <Header
-      name={profile?.name}
-      login={profile?.login}
-      avatar={profile?.avatar_url}
-    />
-  );
+  return <Router />;
 };
 
 export default App;
