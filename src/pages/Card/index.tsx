@@ -10,6 +10,8 @@ import {
 
 import { RiTwitchFill } from 'react-icons/ri';
 
+import { SiDevDotTo } from 'react-icons/si';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -78,18 +80,25 @@ const Card: React.FC<IProfile> = () => {
                   <AiFillLinkedin />
                 </a>
                 <a
-                  href="https://medium.com/@fariasmateuss"
+                  href="https://medium.com/fariasmateuss"
                   target="blank"
                   className="icon"
                 >
                   <AiFillMediumSquare />
                 </a>
                 <a
-                  href="https://medium.com/@fariasmateuss"
+                  href="https://twitter.com/fariasmateuss"
                   target="blank"
                   className="icon"
                 >
                   <AiFillTwitterSquare />
+                </a>
+                <a
+                  href="https://dev.to/fariasmateuss"
+                  target="blank"
+                  className="icon"
+                >
+                  <SiDevDotTo />
                 </a>
                 <a
                   href="https://www.youtube.com/channel/UC2dD4ZlE8zuMoVGOP3jdB8g?sub_confirmation=1"
