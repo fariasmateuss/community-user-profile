@@ -43,7 +43,7 @@ body {
   height: 265px;
 }
 
-.mail {
+.github {
   position: absolute;
   top: 1rem;
   right: 2rem;
@@ -54,7 +54,7 @@ body {
   text-decoration: none;
 }
 
-.mail:hover {
+.github:hover {
   opacity: 1;
 }
 
@@ -144,6 +144,10 @@ body {
   color: #fff;
 }
 
+.icon-location {
+  font-size: 1rem;
+}
+
 .content {
   display: flex;
   padding: 1.7rem 2.5rem 2.6rem 2.5rem;
@@ -222,7 +226,7 @@ body {
   margin-top: 5px;
 }
 
-.follow-wrap,
+.email-wrap,
 .projects-wrap {
   flex: 4;
   display: flex;
@@ -231,12 +235,12 @@ body {
   transition: 0.5s;
 }
 
-.follow-wrap:hover,
+.email-wrap:hover,
 .projects-wrap:hover {
   flex: 5;
 }
 
-.follow {
+.email {
   padding: 9.6px 0;
   width: 100%;
   background: linear-gradient(to right, #4facfe 0%, #00f2fe 140%);
@@ -339,7 +343,7 @@ body {
     font-size: 1.1rem;
   }
 
-  .follow {
+  .email {
     padding: 7.6px 0;
     border-radius: 14.6px;
     font-size: 0.6rem;

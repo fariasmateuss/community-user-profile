@@ -10,6 +10,8 @@ import {
 
 import { RiTwitchFill } from 'react-icons/ri';
 
+import { TiLocationArrowOutline } from 'react-icons/ti';
+
 import { SiDevDotTo } from 'react-icons/si';
 
 import api from '../../services/api';
@@ -49,7 +51,7 @@ const Card: React.FC<IProfile> = () => {
             <div className="hamburger-menu">
               <div className="center" />
             </div>
-            <a href="https://github.com/fariasmateuss/" className="mail">
+            <a href="https://github.com/fariasmateuss/" className="github">
               <AiFillGithub size={34} />
             </a>
             <div className="main">
@@ -61,7 +63,12 @@ const Card: React.FC<IProfile> = () => {
                 />
               </div>
               <h3 className="name">{profile?.name}</h3>
-              <h3 className="sub-location">{profile?.location}</h3>
+              <h3 className="sub-location">
+                <span className="icon-location">
+                  <TiLocationArrowOutline />
+                </span>
+                {profile?.location}
+              </h3>
             </div>
           </div>
 
@@ -80,7 +87,7 @@ const Card: React.FC<IProfile> = () => {
                   <AiFillLinkedin />
                 </a>
                 <a
-                  href="https://medium.com/fariasmateuss"
+                  href="https://medium.com/@fariasmateuss"
                   target="blank"
                   className="icon"
                 >
@@ -116,11 +123,11 @@ const Card: React.FC<IProfile> = () => {
                 </a>
               </div>
               <div className="buttons-wrap">
-                <div className="follow-wrap">
+                <div className="email-wrap">
                   <a
                     href="mailto:mateus_vinicius15@outlook.com"
                     target="blank"
-                    className="follow"
+                    className="email"
                   >
                     Email
                   </a>
