@@ -6,8 +6,7 @@
 }
 
 body {
-  background-color: #efefef;
-  background: #f0f0f0 url(../../assets/img/github.svg) no-repeat 80% top;
+  background: var(--front-color) url(../../assets/img/github.svg) no-repeat 80% top;
 }
 
 .container {
@@ -21,7 +20,7 @@ body {
 .card {
   position: relative;
   width: 400px;
-  background-color: #fff;
+  background-color: var(--bg-card);
   border-radius: 5px;
   box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -34,7 +33,7 @@ body {
   height: 270px;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to top, #00f2fe, #4facfe);
+  background-image: linear-gradient(to top, var(--bg-card-before-one),  var(--bg-card-before-two));
   clip-path: circle(400px at 50% -48.5%);
 }
 
@@ -43,18 +42,18 @@ body {
   height: 265px;
 }
 
-.github {
+.mail {
   position: absolute;
   top: 1rem;
   right: 2rem;
-  color: #fff;
+  color: var(--primary);
   opacity: 0.8;
   transition: 0.3s;
   z-index: 3;
   text-decoration: none;
 }
 
-.github:hover {
+.mail:hover {
   opacity: 1;
 }
 
@@ -80,7 +79,7 @@ body {
   width: 70%;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #fff;
+  background-color: var(--primary);
   border-radius: 1px;
 }
 
@@ -91,7 +90,7 @@ body {
   width: 100%;
   height: 2px;
   border-radius: 1px;
-  background-color: #fff;
+  background-color: var(--primary);
 }
 
 .hamburger-menu:before {
@@ -119,7 +118,7 @@ body {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 4px solid #00d8fe;
+  border: 4px solid  var(--circle);
   margin-bottom: 2px;
   overflow: hidden;
 }
@@ -130,7 +129,7 @@ body {
 
 .name {
   font-size: 1.2rem;
-  color: #fff;
+  color: var(--primary);
   font-weight: 500;
   line-height: 1;
   margin: 5px 0;
@@ -141,7 +140,7 @@ body {
   font-family: 'Cutive Mono', monospace;
   font-size: 1.2rem;
   opacity: 0.8;
-  color: #fff;
+  color: var(--primary);
 }
 
 .icon-location {
@@ -160,19 +159,19 @@ body {
   text-align: right;
   align-items: flex-end;
   justify-content: space-between;
-  margin-left: 2.1rem;
+  margin-left: 1.6rem;
 }
 
 .number {
   font-size: 2.1rem;
   font-weight: 200;
-  color: #333;
+  color: var(--number);
   line-height: 1.2;
 }
 
 .number-title {
   font-size: 0.55rem;
-  color: #666;
+  color: var(--number-title);
   font-weight: 400;
   line-height: 1;
   letter-spacing: 1px;
@@ -181,7 +180,7 @@ body {
 
 .title {
   position: relative;
-  color: #555;
+  color: var(--title);
   font-weight: 500;
   font-size: 1.1rem;
   padding: 0 0 3px 0;
@@ -194,13 +193,13 @@ body {
   position: absolute;
   height: 3px;
   width: 50%;
-  background-color: #555;
+  background-color: var(--title);
   bottom: 0;
   left: 0;
 }
 
 .text {
-  color: #666;
+  color: var(--text);
   font-weight: 300;
   line-height: 1.7;
 }
@@ -210,7 +209,7 @@ body {
 }
 
 .icon {
-  color: #c4c4c4;
+  color: var(--icon);
   font-size: 1.5rem;
   text-decoration: none;
   margin-right: 8px;
@@ -218,7 +217,7 @@ body {
 }
 
 .icon:hover {
-  color: #4facfe;
+  color: var(--border);
 }
 
 .buttons-wrap {
@@ -226,8 +225,8 @@ body {
   margin-top: 5px;
 }
 
-.email-wrap,
-.projects-wrap {
+.first-wrap,
+.second-wrap {
   flex: 4;
   display: flex;
   justify-content: center;
@@ -235,16 +234,16 @@ body {
   transition: 0.5s;
 }
 
-.email-wrap:hover,
-.projects-wrap:hover {
+.first-wrap:hover,
+.second-wrap:hover {
   flex: 5;
 }
 
-.email {
+.first {
   padding: 9.6px 0;
   width: 100%;
-  background: linear-gradient(to right, #4facfe 0%, #00f2fe 140%);
-  color: #fff;
+  background: linear-gradient(to right, var(--bg-card-before-two) 0%, var(--bg-card-before-one) 140%);
+  color: var(--primary);
   text-align: center;
   text-decoration: none;
   font-size: 0.7rem;
@@ -254,11 +253,11 @@ body {
   margin-right: 3px;
 }
 
-.projects {
+.second {
   padding: 7.6px 0;
   width: 100%;
-  border: 2px solid #4facfe;
-  color: #4facfe;
+  border: 2px solid var(--border);
+  color: var(--border);
   text-decoration: none;
   text-align: center;
   font-size: 0.7rem;
@@ -343,13 +342,13 @@ body {
     font-size: 1.1rem;
   }
 
-  .email {
+  .first {
     padding: 7.6px 0;
     border-radius: 14.6px;
     font-size: 0.6rem;
   }
 
-  .projects {
+  .second {
     padding: 5.6px 0;
     border-radius: 14.6px;
     font-size: 0.6rem;
