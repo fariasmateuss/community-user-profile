@@ -9,11 +9,9 @@ import {
 } from 'react-icons/ai';
 
 import { RiTwitchFill } from 'react-icons/ri';
-
 import { TiLocationArrowOutline } from 'react-icons/ti';
-
 import { SiDevDotTo } from 'react-icons/si';
-
+import { HiOutlineMail } from 'react-icons/hi';
 import api from '../../services/api';
 
 import './styles.css';
@@ -51,8 +49,8 @@ const Card: React.FC<IProfile> = () => {
             <div className="hamburger-menu">
               <div className="center" />
             </div>
-            <a href="https://github.com/fariasmateuss/" className="github">
-              <AiFillGithub size={34} />
+            <a href="mailto:mateus_vinicius15@outlook.com" className="mail">
+              <HiOutlineMail size={30} />
             </a>
             <div className="main">
               <div className="image">
@@ -79,6 +77,13 @@ const Card: React.FC<IProfile> = () => {
                 <p className="text">{profile?.bio}</p>
               </div>
               <div className="icons-container">
+                <a
+                  href="https://github.com/fariasmateuss/"
+                  target="blank"
+                  className="icon"
+                >
+                  <AiFillGithub />
+                </a>
                 <a
                   href="https://www.linkedin.com/in/fariasmateuss/"
                   target="blank"
@@ -123,20 +128,20 @@ const Card: React.FC<IProfile> = () => {
                 </a>
               </div>
               <div className="buttons-wrap">
-                <div className="email-wrap">
+                <div className="first-wrap">
                   <a
                     href="mailto:mateus_vinicius15@outlook.com"
                     target="blank"
-                    className="email"
+                    className="first"
                   >
-                    Email
+                    Contact
                   </a>
                 </div>
-                <div className="projects-wrap">
+                <div className="second-wrap">
                   <a
                     href="https://github.com/fariasmateuss?tab=repositories"
                     target="blank"
-                    className="projects"
+                    className="second"
                   >
                     Projects
                   </a>

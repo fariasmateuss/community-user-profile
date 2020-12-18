@@ -14,3 +14,19 @@ body {
 button {
   cursor: pointer;
 }
+
+:root {
+  --primary: #FFFFFF;
+  --number: #333333;
+  --number-title: #666666;
+  --title: #555555;
+  --text: #666666;
+  --icon: #C4C4C4;
+  --bg: #EFEFEF;
+  --front-color: #F0F0F0;
+  --bg-card: #FFFFFF;
+  --bg-card-before-one: #00F2EE;
+  --bg-card-before-two: #4FACFE;
+  --circle: #00D8FE;
+  --border: #4FACFE;
+}
