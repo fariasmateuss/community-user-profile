@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
   AiFillGithub,
@@ -7,11 +7,11 @@ import {
   AiFillMediumSquare,
   AiFillTwitterSquare,
 } from 'react-icons/ai';
-
-import { RiTwitchFill } from 'react-icons/ri';
-import { TiLocationArrowOutline } from 'react-icons/ti';
 import { SiDevDotTo } from 'react-icons/si';
+import { MdPhotoCamera } from 'react-icons/md';
+import { TiLocationArrow } from 'react-icons/ti';
 import { HiOutlineMail } from 'react-icons/hi';
+
 import api from '../../services/api';
 
 import './styles.css';
@@ -27,22 +27,43 @@ interface IProfile {
   following: number;
 }
 
-const Card: React.FC<IProfile> = () => {
-  const [profile, setProfile] = useState<IProfile | null>();
+const Card: React.FC = () => {
+  const [user, setUser] = useState<IProfile | null>();
 
   useEffect(() => {
     async function fetchProfileData(): Promise<void> {
-      const response = await api.get<IProfile>('/users/fariasmateuss');
-      const information = response.data;
+      const { data } = await api.get<IProfile>('/users/fariasmateuss');
 
-      setProfile(information);
+      setUser(data);
     }
 
     fetchProfileData();
   }, []);
 
+  const image: HTMLElement | any = document.querySelector('.image');
+  const hover: HTMLElement | any = document.querySelector('.hover');
+  const modal: HTMLElement | any = document.querySelector('.modal');
+  const close: HTMLElement | any = document.querySelector('.close');
+
+  if (image || close) {
+    image.addEventListener('click', () => {
+      hover.classList.add('active');
+      modal.classList.add('show');
+    });
+
+    close.addEventListener('click', () => {
+      hover.classList.remove('active');
+      modal.classList.remove('show');
+    });
+  }
+
   return (
     <main>
+      <div className="modal">
+        <img src={user?.avatar_url} alt="" />
+        <div className="close" />
+      </div>
+
       <div className="container">
         <div className="card">
           <div className="header">
@@ -56,16 +77,19 @@ const Card: React.FC<IProfile> = () => {
               <div className="image">
                 <img
                   className="avatar"
-                  src={profile?.avatar_url}
-                  alt={profile?.name}
+                  src={user?.avatar_url}
+                  alt={user?.name}
                 />
+                <div className="hover">
+                  <MdPhotoCamera size={36} />
+                </div>
               </div>
-              <h3 className="name">{profile?.name}</h3>
+              <h3 className="name">{user?.name}</h3>
               <h3 className="sub-location">
                 <span className="icon-location">
-                  <TiLocationArrowOutline />
+                  <TiLocationArrow />
                 </span>
-                {profile?.location}
+                {user?.location}
               </h3>
             </div>
           </div>
@@ -74,8 +98,9 @@ const Card: React.FC<IProfile> = () => {
             <div className="left">
               <div className="about-container">
                 <h3 className="title">About</h3>
-                <p className="text">{profile?.bio}</p>
+                <p className="text">{user?.bio}</p>
               </div>
+
               <div className="icons-container">
                 <a
                   href="https://github.com/fariasmateuss/"
@@ -119,14 +144,8 @@ const Card: React.FC<IProfile> = () => {
                 >
                   <AiFillYoutube />
                 </a>
-                <a
-                  href="https://www.twitch.tv/fariasmateuss"
-                  target="blank"
-                  className="icon"
-                >
-                  <RiTwitchFill />
-                </a>
               </div>
+
               <div className="buttons-wrap">
                 <div className="first-wrap">
                   <a
@@ -151,15 +170,15 @@ const Card: React.FC<IProfile> = () => {
 
             <div className="right">
               <div>
-                <h3 className="number">{profile?.public_repos}</h3>
+                <h3 className="number">{user?.public_repos}</h3>
                 <h3 className="number-title">Repositories</h3>
               </div>
               <div>
-                <h3 className="number">{profile?.following}</h3>
+                <h3 className="number">{user?.following}</h3>
                 <h3 className="number-title">Following</h3>
               </div>
               <div>
-                <h3 className="number">{profile?.followers}</h3>
+                <h3 className="number">{user?.followers}</h3>
                 <h3 className="number-title">Followers</h3>
               </div>
             </div>
