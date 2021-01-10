@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 
 import Card from '../pages/Card';
 
-const Router: React.FC = () => {
+function Router() {
   return (
     <BrowserRouter>
       <Switch>
@@ -12,6 +12,6 @@ const Router: React.FC = () => {
       </Switch>
     </BrowserRouter>
   );
-};
+}
 
 export default Router;

@@ -27,7 +27,7 @@ interface IProfile {
   following: number;
 }
 
-const Card: React.FC = () => {
+function Card() {
   const [user, setUser] = useState<IProfile | null>();
 
   useEffect(() => {
@@ -187,6 +187,6 @@ const Card: React.FC = () => {
       </div>
     </main>
   );
-};
+}
 
 export default Card;
