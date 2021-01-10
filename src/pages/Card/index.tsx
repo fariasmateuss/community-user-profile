@@ -11,27 +11,18 @@ import { SiDevDotTo } from 'react-icons/si';
 import { TiLocationArrow } from 'react-icons/ti';
 import { HiOutlineMail } from 'react-icons/hi';
 
+import { ProfileProps } from './types';
+
 import api from '../../services/api';
 
 import './styles.css';
 
-interface IProfile {
-  avatar_url: string;
-  name: string;
-  login: string;
-  bio: string;
-  location: string;
-  public_repos: number;
-  followers: number;
-  following: number;
-}
-
 function Card() {
-  const [user, setUser] = useState<IProfile | null>();
+  const [user, setUser] = useState<ProfileProps | null>();
 
   useEffect(() => {
     async function fetchProfileData(): Promise<void> {
-      const { data } = await api.get<IProfile>('/users/fariasmateuss');
+      const { data } = await api.get<ProfileProps>('/users/fariasmateuss');
 
       setUser(data);
     }
