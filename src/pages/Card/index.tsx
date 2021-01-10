@@ -8,7 +8,6 @@ import {
   AiFillTwitterSquare,
 } from 'react-icons/ai';
 import { SiDevDotTo } from 'react-icons/si';
-import { MdPhotoCamera } from 'react-icons/md';
 import { TiLocationArrow } from 'react-icons/ti';
 import { HiOutlineMail } from 'react-icons/hi';
 
@@ -40,30 +39,8 @@ function Card() {
     fetchProfileData();
   }, []);
 
-  const image: HTMLElement | any = document.querySelector('.image');
-  const hover: HTMLElement | any = document.querySelector('.hover');
-  const modal: HTMLElement | any = document.querySelector('.modal');
-  const close: HTMLElement | any = document.querySelector('.close');
-
-  if (image || close) {
-    image.addEventListener('click', () => {
-      hover.classList.add('active');
-      modal.classList.add('show');
-    });
-
-    close.addEventListener('click', () => {
-      hover.classList.remove('active');
-      modal.classList.remove('show');
-    });
-  }
-
   return (
     <main>
-      <div className="modal">
-        <img src={user?.avatar_url} alt="" />
-        <div className="close" />
-      </div>
-
       <div className="container">
         <div className="card">
           <div className="header">
@@ -80,9 +57,6 @@ function Card() {
                   src={user?.avatar_url}
                   alt={user?.name}
                 />
-                <div className="hover">
-                  <MdPhotoCamera size={36} />
-                </div>
               </div>
               <h3 className="name">{user?.name}</h3>
               <h3 className="sub-location">
