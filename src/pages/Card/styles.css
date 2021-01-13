@@ -193,22 +193,6 @@
   line-height: 1.7;
 }
 
-.icons-container {
-  padding: 1rem 0;
-}
-
-.icon {
-  color: var(--icon);
-  font-size: 1.5rem;
-  text-decoration: none;
-  margin-right: 8px;
-  transition: 0.3s;
-}
-
-.icon:hover {
-  color: var(--border);
-}
-
 .buttons-wrap {
   display: flex;
   margin-top: 5px;
@@ -321,14 +305,6 @@
 
   .text {
     font-size: 0.8rem;
-  }
-
-  .icons-container {
-    padding: 0.5rem 0;
-  }
-
-  .icon {
-    font-size: 1.1rem;
   }
 
   .first {
