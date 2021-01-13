@@ -1,17 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Card from '../pages/Card';
+import Profile from '../pages/Profile';
 
-const Router: React.FC = () => {
+function Router() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact to="/" component={Card} />
-        <Redirect to="/" />
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Profile />} />
+      </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default Router;
