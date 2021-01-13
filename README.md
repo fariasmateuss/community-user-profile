@@ -3,7 +3,7 @@ My personal website consuming GitHub API
 
 <p>
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
-    <img src=".github/thumbnail.png" align="right" />
+    <img src="docs/resources/thumbnail.png" align="right" />
   </a>
 </p>
 
