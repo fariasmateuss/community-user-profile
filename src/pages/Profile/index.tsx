@@ -11,8 +11,8 @@ import SocialMedia from '../../components/SocialMedia';
 
 import './styles.css';
 
-function Card() {
-  const [user, setUser] = useState<ProfileProps | null>();
+function Profile() {
+  const [user, setUser] = useState<ProfileProps | null>(null);
 
   useEffect(() => {
     async function fetchProfileData(): Promise<void> {
@@ -107,4 +107,4 @@ function Card() {
   );
 }
 
-export default Card;
+export default Profile;
