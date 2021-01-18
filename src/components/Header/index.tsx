@@ -10,7 +10,7 @@ function Header({ returnToProfile }: HeaderProps) {
   return (
     <header className="wrapper-header">
       <h1 className="topic">
-        Discovory Projects{' '}
+        Open Source Projects{' '}
         <span role="img" aria-label="Astronaut">
           👨‍🚀
         </span>
