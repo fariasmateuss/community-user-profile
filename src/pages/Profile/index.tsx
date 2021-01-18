@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-import { TiLocationArrow } from 'react-icons/ti';
 import { HiOutlineMail } from 'react-icons/hi';
 
 import { Users } from '../../shared/typesGitHubAPI';
@@ -46,9 +45,7 @@ function Profile() {
                 </div>
                 <h3 className="name">{user.name}</h3>
                 <h3 className="sub-location">
-                  <span className="icon-location">
-                    <TiLocationArrow />
-                  </span>
+                  <span className="icon-location" />
                   {user.location}
                 </h3>
               </div>
