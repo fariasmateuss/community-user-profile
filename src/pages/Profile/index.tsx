@@ -26,9 +26,9 @@ function Profile() {
   return (
     <main>
       {user && (
-        <div className="container">
+        <div className="wrapper-profile">
           <div className="card">
-            <div className="header">
+            <div className="division">
               <div className="hamburger-menu">
                 <div className="center" />
               </div>
