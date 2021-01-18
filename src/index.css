@@ -7,13 +7,18 @@
 }
 
 body {
-  background: #efefef;
   -webkit-font-smoothing: antialiased;
   background: var(--front-color) url(./assets/img/github.svg) no-repeat 80% top;
 }
 
 button {
   cursor: pointer;
+}
+
+#root {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 :root {
@@ -30,4 +35,11 @@ button {
   --bg-card-before-two: #4FACFE;
   --circle: #00D8FE;
   --border: #4FACFE;
+  --border-box: #E1E4E8;
+  --link: #0366D6;
+  --gray: #586069;
+  --icon-box: #6A737D;
+  --topic: #3A3A3A;
+  --return: #A8A8B3;
+  --return-hover: #3D3D4D;
 }

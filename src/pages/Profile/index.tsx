@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-import { TiLocationArrow } from 'react-icons/ti';
+import { Link } from 'react-router-dom';
 import { HiOutlineMail } from 'react-icons/hi';
-
-import { ProfileProps } from './types';
+import { Users } from '../../shared/typesGitHubAPI';
 
 import api from '../../services/api';
 
@@ -12,11 +11,11 @@ import SocialMedia from '../../components/SocialMedia';
 import './styles.css';
 
 function Profile() {
-  const [user, setUser] = useState<ProfileProps | null>(null);
+  const [user, setUser] = useState<Users | null>(null);
 
   useEffect(() => {
     async function fetchProfileData(): Promise<void> {
-      const { data } = await api.get<ProfileProps>('/users/fariasmateuss');
+      const { data } = await api.get<Users>('/users/fariasmateuss');
 
       setUser(data);
     }
@@ -27,9 +26,9 @@ function Profile() {
   return (
     <main>
       {user && (
-        <div className="container">
+        <div className="wrapper-profile">
           <div className="card">
-            <div className="header">
+            <div className="division">
               <div className="hamburger-menu">
                 <div className="center" />
               </div>
@@ -46,9 +45,7 @@ function Profile() {
                 </div>
                 <h3 className="name">{user.name}</h3>
                 <h3 className="sub-location">
-                  <span className="icon-location">
-                    <TiLocationArrow />
-                  </span>
+                  <span className="icon-location" />
                   {user.location}
                 </h3>
               </div>
@@ -74,13 +71,9 @@ function Profile() {
                     </a>
                   </div>
                   <div className="second-wrap">
-                    <a
-                      href="https://github.com/fariasmateuss?tab=repositories"
-                      target="blank"
-                      className="second"
-                    >
+                    <Link to="/repositories" className="second">
                       Projects
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

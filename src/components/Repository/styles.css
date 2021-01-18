@@ -1,0 +1,56 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+}
+
+.anchor-box {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--link);
+  text-decoration: none;
+}
+
+.anchor-box:focus,
+.anchor-box:hover {
+  text-decoration: underline;
+}
+
+.description-box {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+  letter-spacing: 0.1px;
+}
+
+.icon-box {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--icon-box);
+  flex-shrink: 0;
+}
+
+.bottom-side {
+  display: flex;
+  align-items: center;
+}
+
+.icon-wrap {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.stars,
+.forks {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
