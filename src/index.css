@@ -7,7 +7,6 @@
 }
 
 body {
-  background: #efefef;
   -webkit-font-smoothing: antialiased;
   background: var(--front-color) url(./assets/img/github.svg) no-repeat 80% top;
 }
