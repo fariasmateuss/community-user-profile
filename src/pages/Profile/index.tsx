@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { TiLocationArrow } from 'react-icons/ti';
 import { HiOutlineMail } from 'react-icons/hi';
 
-import { ProfileProps } from './types';
+import { Users } from '../../shared/typesGitHubAPI';
 
 import api from '../../services/api';
 
@@ -12,11 +12,11 @@ import SocialMedia from '../../components/SocialMedia';
 import './styles.css';
 
 function Profile() {
-  const [user, setUser] = useState<ProfileProps | null>(null);
+  const [user, setUser] = useState<Users | null>(null);
 
   useEffect(() => {
     async function fetchProfileData(): Promise<void> {
-      const { data } = await api.get<ProfileProps>('/users/fariasmateuss');
+      const { data } = await api.get<Users>('/users/fariasmateuss');
 
       setUser(data);
     }
