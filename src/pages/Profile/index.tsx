@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { Link } from 'react-router-dom';
 import { HiOutlineMail } from 'react-icons/hi';
-
 import { Users } from '../../shared/typesGitHubAPI';
 
 import api from '../../services/api';
@@ -71,13 +71,9 @@ function Profile() {
                     </a>
                   </div>
                   <div className="second-wrap">
-                    <a
-                      href="https://github.com/fariasmateuss?tab=repositories"
-                      target="blank"
-                      className="second"
-                    >
+                    <Link to="/repositories" className="second">
                       Projects
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
