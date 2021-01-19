@@ -22,24 +22,24 @@ button {
 }
 
 :root {
-  --primary: #FFFFFF;
+  --primary: #ffffff;
   --number: #333333;
   --number-title: #666666;
   --title: #555555;
   --text: #666666;
-  --icon: #C4C4C4;
-  --bg: #EFEFEF;
-  --front-color: #F0F0F0;
-  --bg-card: #FFFFFF;
-  --bg-card-before-one: #00F2EE;
-  --bg-card-before-two: #4FACFE;
-  --circle: #00D8FE;
-  --border: #4FACFE;
-  --border-box: #E1E4E8;
-  --link: #0366D6;
+  --icon: #c4c4c4;
+  --bg: #efefef;
+  --front-color: #f0f0f0;
+  --bg-card: #ffffff;
+  --bg-card-before-one: #00f2ee;
+  --bg-card-before-two: #4facfe;
+  --circle: #00d8fe;
+  --border: #4facfe;
+  --border-box: #e1e4e8;
+  --link: #0366d6;
   --gray: #586069;
-  --icon-box: #6A737D;
-  --topic: #3A3A3A;
-  --return: #A8A8B3;
-  --return-hover: #3D3D4D;
+  --icon-box: #6a737d;
+  --topic: #3a3a3a;
+  --return: #a8a8b3;
+  --return-hover: #3d3d4d;
 }

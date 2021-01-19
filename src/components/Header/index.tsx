@@ -11,7 +11,7 @@ function Header({ returnToProfile }: HeaderProps) {
     <header className="wrapper-header">
       <h1 className="topic">
         Open Source Projects{' '}
-        <span role="img" aria-label="Astronaut">
+        <span className="emoji" role="img" aria-label="Astronaut">
           👨‍🚀
         </span>
       </h1>

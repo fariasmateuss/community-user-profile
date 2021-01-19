@@ -22,7 +22,11 @@
   height: 270px;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to top, var(--bg-card-before-one),  var(--bg-card-before-two));
+  background-image: linear-gradient(
+    to top,
+    var(--bg-card-before-one),
+    var(--bg-card-before-two)
+  );
   clip-path: circle(400px at 50% -48.5%);
 }
 
@@ -107,7 +111,7 @@
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  border: 4px solid  var(--circle);
+  border: 4px solid var(--circle);
   margin-bottom: 2px;
   overflow: hidden;
 }
@@ -215,7 +219,11 @@
 .first {
   padding: 9.6px 0;
   width: 100%;
-  background: linear-gradient(to right, var(--bg-card-before-two) 0%, var(--bg-card-before-one) 140%);
+  background: linear-gradient(
+    to right,
+    var(--bg-card-before-two) 0%,
+    var(--bg-card-before-one) 140%
+  );
   color: var(--primary);
   text-align: center;
   text-decoration: none;
