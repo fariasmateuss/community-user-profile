@@ -20,7 +20,7 @@ function Repositories() {
 
   return (
     <main>
-      <Header returnToProfile />
+      <Header title="Open source projects" emoji="👨‍🚀" returnToProfile />
 
       <article className="wrapper-repositories">
         {repositories.map(repository => (
