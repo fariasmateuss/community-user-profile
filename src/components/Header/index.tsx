@@ -6,13 +6,13 @@ import { HeaderProps } from './types';
 
 import './styles.css';
 
-function Header({ returnToProfile }: HeaderProps) {
+function Header({ returnToProfile, title, emoji }: HeaderProps) {
   return (
     <header className="wrapper-header">
       <h1 className="topic">
-        Open Source Projects{' '}
+        {title}{' '}
         <span className="emoji" role="img" aria-label="Astronaut">
-          👨‍🚀
+          {emoji}
         </span>
       </h1>
 

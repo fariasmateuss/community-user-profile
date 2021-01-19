@@ -1,3 +1,5 @@
 export interface HeaderProps {
-  returnToProfile: boolean;
+  returnToProfile?: boolean;
+  title: string;
+  emoji: string;
 }
