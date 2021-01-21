@@ -1,5 +1,4 @@
 # Profile
-My personal website consuming GitHub API
 
 <p>
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
@@ -10,12 +9,15 @@ My personal website consuming GitHub API
 ## Tech
 
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
-- [ReactJs](https://reactjs.org) - A JavaScript library for building user interfaces.
+- [React](https://reactjs.org) - A JavaScript library for building user interfaces.
   - [React Icons](https://react-icons.github.io/react-icons/) - Utilizes ES6 imports that allows you to include only the icons that your project is using.
   - [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - DOM bindings.
 - [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and NodeJs.
 - [Prettier](https://prettier.io/docs/en/cli.html) - An opinionated code formatter.
 - [ESlint](https://eslint.org) - ESLint statically analyzes your code to quickly find problems.
+
+## API
+* [Github](https://developer.github.com/v3/)
 
 ## Development setup
 
@@ -37,7 +39,7 @@ Run to install the dependencies;
 yarn
 ```
 
-To start the project;
+Run this project;
 
 ```
 yarn start
