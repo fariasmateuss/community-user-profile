@@ -1,4 +1,4 @@
-# Profile
+# GitHub Profile Concept
 
 <p>
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
