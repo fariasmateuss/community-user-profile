@@ -15,6 +15,10 @@
 
 This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
 
+## How do I use?
+
+Use this template 👉️ [here](https://github.com/fariasmateuss/github-profile-concept/generate)
+
 ## Development setup
 
 To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
@@ -45,26 +49,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br>
 You will also see any lint errors in the console.
-
-## API
-
-[Github](https://developer.github.com/v3/) REST API.
-
-### Endpoints
-
-Requests to the following REST endpoints.
-
-#### `Get a user`
-
-Provides publicly available information about someone with a GitHub account.
-
-`https://api.github.com/users/{username}`
-
-#### `List repositories for a user`
-
-Lists public repositories for the specified user.
-
-`https://api.github.com/users/{username}/repos`
 
 ## Feedback
 
