@@ -1,4 +1,4 @@
-# Profile
+# GitHub Profile Concept
 
 <p>
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
@@ -10,18 +10,16 @@
 
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 - [React](https://reactjs.org) - A JavaScript library for building user interfaces.
-  - [React Icons](https://react-icons.github.io/react-icons/) - Utilizes ES6 imports that allows you to include only the icons that your project is using.
-  - [React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom) - DOM bindings.
-- [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and NodeJs.
-- [Prettier](https://prettier.io/docs/en/cli.html) - An opinionated code formatter.
-- [ESlint](https://eslint.org) - ESLint statically analyzes your code to quickly find problems.
 
-## API
-* [Github](https://developer.github.com/v3/)
+## Usage
+
+This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
+
+## How do I use?
+
+Use this template 👉️ [here](https://github.com/fariasmateuss/github-profile-concept/generate)
 
 ## Development setup
-
-### Prerequisites
 
 To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
 
@@ -31,19 +29,26 @@ To run this project in the development mode, you'll need to have a basic environ
 git clone https://github.com/fariasmateuss/profile.git
 ```
 
-### Installing
+#### Installation
 
-Run to install the dependencies;
+In the project directory, you can run:
+
+To install the dependencies package.
 
 ```
 yarn
 ```
 
-Run this project;
+Runs the app in the development mode.
 
 ```
 yarn start
 ```
+
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
 ## Feedback
 
