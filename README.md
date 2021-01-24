@@ -1,8 +1,7 @@
-# GitHub Profile Concept
-
 <p>
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
-    <img src="docs/resources/thumbnail.png" align="right" />
+    <img src="docs/resources/card.png" align="left" />
+    <img src="docs/resources/repositories.png" align="right" />
   </a>
 </p>
 
@@ -33,17 +32,17 @@ git clone https://github.com/fariasmateuss/profile.git
 
 In the project directory, you can run:
 
-To install the dependencies package.
-
 ```
 yarn
 ```
 
-Runs the app in the development mode.
+To install the dependencies package.
 
 ```
 yarn start
 ```
+
+Runs the app in the development mode.
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
