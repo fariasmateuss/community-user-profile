@@ -1,7 +1,7 @@
 <p>
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
-    <img src="docs/resources/card.png" align="left" />
-    <img src="docs/resources/repositories.png" align="right" />
+    <img src="docs/resources/card.png" width="45%" />
+    <img src="docs/resources/repositories.png" width="45%" />
   </a>
 </p>
 
