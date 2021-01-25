@@ -1,6 +1,8 @@
 {
-  "name": "github-community-profile",
+  "name": "github-user-profile",
   "author": "Mateus V. Farias",
+  "description": "GitHub User Profile",
+  "repository": {"type": "git", "url": "https://github.com/fariasmateuss/github-user-profile.git"},
   "version": "0.1.0",
   "private": true,
   "dependencies": {
