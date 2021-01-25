@@ -1,8 +1,6 @@
 <p align="center">
-  <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
-    <img src="docs/resources/card.png" width="49%" />
-    <img src="docs/resources/repositories.png" width="49%" />
-  </a>
+  <img src="docs/resources/card.png" width="49%" />
+  <img src="docs/resources/repositories.png" width="49%" />
 </p>
 
 ## Tech
@@ -36,7 +34,7 @@ curl https://api.github.com/users/{username}/repos
 
 ## How do I use?
 
-Use this template 👉️ [here](https://github.com/fariasmateuss/github-profile-concept/generate)
+Use this template 👉️ [here](https://github.com/fariasmateuss/github-user-profile/generate)
 
 ## Development setup
 
@@ -47,7 +45,7 @@ To run this project in the development mode, you'll need to have a basic environ
 The best way to start with this template is using create-next-app.
 
 ```
-npx create-next-app github-profile -e https://github.com/fariasmateuss/github-community-profile
+npx create-next-app github-user-profile -e https://github.com/fariasmateuss/github-user-profile
 
 ```
 
