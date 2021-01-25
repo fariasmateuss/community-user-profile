@@ -1,7 +1,7 @@
-<p>
+<p align="center">
   <a aria-label="Hosting with Vercel" href="https://fariasmateuss.vercel.app/">
-    <img src="docs/resources/card.png" width="45%" />
-    <img src="docs/resources/repositories.png" width="45%" />
+    <img src="docs/resources/card.png" width="49%" />
+    <img src="docs/resources/repositories.png" width="49%" />
   </a>
 </p>
 
@@ -14,6 +14,26 @@
 
 This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
 
+## API
+
+In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) REST endpoints.
+
+#### `Get a user`
+
+Provides publicly available information about someone with a GitHub account.
+
+```
+curl https://api.github.com/users/{username}
+```
+
+#### `List repositories for a user`
+
+Lists public repositories for the specified user.
+
+```
+curl https://api.github.com/users/{username}/repos
+```
+
 ## How do I use?
 
 Use this template 👉️ [here](https://github.com/fariasmateuss/github-profile-concept/generate)
@@ -22,10 +42,13 @@ Use this template 👉️ [here](https://github.com/fariasmateuss/github-profile
 
 To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
 
-#### Cloning the Repository
+#### Cloning this template
+
+The best way to start with this template is using create-next-app.
 
 ```
-git clone https://github.com/fariasmateuss/profile.git
+npx create-next-app github-profile -e https://github.com/fariasmateuss/github-community-profile
+
 ```
 
 #### Installation
