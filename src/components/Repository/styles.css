@@ -48,9 +48,47 @@
   margin-right: 1rem;
 }
 
-.stars,
-.forks {
+.icon-inner {
   margin-left: 0.3rem;
   font-size: 0.8rem;
   color: var(--gray);
+}
+
+.language {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.language.typescript {
+  background-color: var(--typescript);
+}
+
+.language.javascript {
+  background-color: var(--javascript);
+}
+
+.language.shell {
+  background-color: var(--shell);
+}
+
+.language.css {
+  background-color: var(--css);
+}
+
+.language.scss {
+  background-color: var(--scss);
+}
+
+.language.dart {
+  background-color: var(--dart);
+}
+
+.language.dockerfile {
+  background-color: var(--dockerfile);
+}
+
+.language.other {
+  background-color: var(--other);
 }

@@ -14,7 +14,10 @@ function Repository({ repositories }: RepositoryProps) {
     forks_count,
     stargazers_count,
     html_url,
+    language,
   } = repositories;
+
+  const languageClass = language ? language.toLowerCase() : 'other';
 
   return (
     <div className="box">
@@ -30,12 +33,16 @@ function Repository({ repositories }: RepositoryProps) {
       <div>
         <ul className="bottom-side">
           <li className="icon-wrap">
+            <div className={`language ${languageClass}`} />
+            <span className="icon-inner">{language}</span>
+          </li>
+          <li className="icon-wrap">
             <RiStarLine className="icon-box" />
-            <span className="stars">{stargazers_count}</span>
+            <span className="icon-inner">{stargazers_count}</span>
           </li>
           <li className="icon-wrap">
             <AiOutlineFork className="icon-box" />
-            <span className="forks">{forks_count}</span>
+            <span className="icon-inner">{forks_count}</span>
           </li>
         </ul>
       </div>
