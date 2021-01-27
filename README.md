@@ -32,20 +32,14 @@ Lists public repositories for the specified user.
 curl https://api.github.com/users/{username}/repos
 ```
 
-## How do I use?
-
-Use this template 👉️ [here](https://github.com/fariasmateuss/github-user-profile/generate)
-
 ## Development setup
 
 To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
 
-#### Cloning this template
-
-The best way to start with this template is using create-next-app.
+#### Cloning this repository
 
 ```
-npx create-next-app github-user-profile -e https://github.com/fariasmateuss/github-user-profile
+git clone https://github.com/fariasmateuss/github-user-profile.git
 
 ```
 
