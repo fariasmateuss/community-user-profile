@@ -42,13 +42,13 @@ const socialMedias: NavigationItems = [
 
 function SocialMedia() {
   return (
-    <div className="icons-container">
+    <nav className="icons-container">
       {socialMedias.map(({ icon, url }: NavigationItemProps, index) => (
         <a key={String(index)} href={url} target="blank" className="icon">
           {icon}
         </a>
       ))}
-    </div>
+    </nav>
   );
 }
 
