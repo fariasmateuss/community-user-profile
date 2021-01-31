@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: yarn install
+      - uses: sibiraj-s/action-eslint@v1
+        with:
+          eslintArgs: '--ignore-path .gitignore --quiet'
+          extensions: 'js, jsx, ts, tsx'
+          annotations: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

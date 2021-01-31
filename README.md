@@ -3,6 +3,19 @@
   <img src="docs/resources/repositories.png" width="49%" />
 </p>
 
+## Table of Contents
+
+* [Tech](#Tech)
+* [Usage](#Usage)
+* [API](#API)
+  * [Get a user](#Get-a-user)
+  * [List repositories for a user](#List-repositories-for-a-user)
+* [Development setup](#Development-setup)
+  * [Cloning this repository](#Cloning-this-repository)
+  * [Installation](#Installation)
+* [Feedback](#Feedback)
+* [License](#License)
+
 ## Tech
 
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
