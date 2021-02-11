@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Profile from '../pages/Profile';
-import Repositories from '../pages/Repositories';
+import Profile from '../containers/Profile';
+import Repositories from '../containers/Repositories';
 
 function Router() {
   return (
