@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react';
-
-import { Repos } from '../../shared/types/Repositories';
+import React from 'react';
 
 import Repository from '../../components/Repository';
 import Header from '../../components/Header';
 
-import api from '../../services/api';
+import useRepositoriesData from '../../hooks/repositoriesData';
 
 import './styles.css';
 
 function Repositories() {
-  const [repositories, setRepositories] = useState<Repos[]>([]);
-
-  useEffect(() => {
-    api.get(`users/fariasmateuss/repos`).then(response => {
-      setRepositories(response.data);
-    });
-  }, []);
+  const repositories = useRepositoriesData();
 
   return (
     <main>
