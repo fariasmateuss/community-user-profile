@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
 import { HiOutlineMail } from 'react-icons/hi';
-import { Users } from '../../shared/typesGitHubAPI';
+import { Users } from '../../shared/types/Users';
 
 import api from '../../services/api';
 

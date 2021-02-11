@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Repos } from '../../shared/typesGitHubAPI';
+import { Repos } from '../../shared/types/Repositories';
 
 import Repository from '../../components/Repository';
 import Header from '../../components/Header';
