@@ -1,27 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { Link } from 'react-router-dom';
 import { HiOutlineMail } from 'react-icons/hi';
-import { Users } from '../../shared/types/Users';
-
-import api from '../../services/api';
 
 import SocialMedia from '../../components/SocialMedia';
+
+import useUserData from '../../hooks/users.hooks';
 
 import './styles.css';
 
 function Profile() {
-  const [user, setUser] = useState<Users | null>(null);
-
-  useEffect(() => {
-    async function fetchProfileData(): Promise<void> {
-      const { data } = await api.get<Users>('/users/fariasmateuss');
-
-      setUser(data);
-    }
-
-    fetchProfileData();
-  }, []);
+  const user = useUserData();
 
   return (
     <main>
