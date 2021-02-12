@@ -8,7 +8,7 @@ function useRepositoriesData() {
   const [repositories, setRepositories] = useState<Repos[]>([]);
 
   useEffect(() => {
-    api.get(`users/fariasmateuss/repos`).then(response => {
+    api.get('users/fariasmateuss/repos').then(response => {
       setRepositories(response.data);
     });
   }, []);

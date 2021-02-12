@@ -3,7 +3,7 @@ import React from 'react';
 import Repository from '../../components/Repository';
 import Header from '../../components/Header';
 
-import useRepositoriesData from '../../hooks/repositoriesData';
+import useRepositoriesData from '../../hooks/repositories.hooks';
 
 import './styles.css';
 

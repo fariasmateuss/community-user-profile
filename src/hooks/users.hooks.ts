@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import api from '../services/api';
-
 import { Users } from '../shared/types/Users';
+
+import api from '../services/api';
 
 function useUserData() {
   const [user, setUser] = useState<Users | null>(null);

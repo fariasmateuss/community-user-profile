@@ -5,12 +5,12 @@ import { HiOutlineMail } from 'react-icons/hi';
 
 import SocialMedia from '../../components/SocialMedia';
 
-import useUserData from '../../hooks/userData';
+import useUsersData from '../../hooks/users.hooks';
 
 import './styles.css';
 
 function Profile() {
-  const user = useUserData();
+  const user = useUsersData();
 
   return (
     <main>
