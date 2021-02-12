@@ -1,15 +1,17 @@
 import { useState, useEffect } from 'react';
 
-import { Users } from '../shared/types/Users';
+import { Users } from '../../shared/types/Users';
 
-import api from '../services/api';
+import { USERNAME_KEY } from '../../constants/params';
+
+import api from '../../services/api';
 
 function useUserData() {
   const [user, setUser] = useState<Users | null>(null);
 
   useEffect(() => {
     async function fetchUserData(): Promise<void> {
-      const { data } = await api.get<Users>('/users/fariasmateuss');
+      const { data } = await api.get<Users>(`/users/${USERNAME_KEY}`);
 
       setUser(data);
     }

@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 
-import { Repos } from '../shared/types/Repositories';
+import { Repos } from '../../shared/types/Repositories';
 
-import api from '../services/api';
+import { USERNAME_KEY } from '../../constants/params';
+
+import api from '../../services/api';
 
 function useRepositoriesData() {
   const [repositories, setRepositories] = useState<Repos[]>([]);
 
   useEffect(() => {
-    api.get('users/fariasmateuss/repos').then(response => {
+    api.get(`users/${USERNAME_KEY}/repos`).then(response => {
       setRepositories(response.data);
     });
   }, []);

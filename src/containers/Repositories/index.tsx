@@ -3,12 +3,12 @@ import React from 'react';
 import Repository from '../../components/Repository';
 import Header from '../../components/Header';
 
-import useRepositoriesData from '../../hooks/repositories.hooks';
+import useRepositories from '../../hooks/userRepositories';
 
 import './styles.css';
 
 function Repositories() {
-  const repositories = useRepositoriesData();
+  const repositories = useRepositories();
 
   return (
     <main>
