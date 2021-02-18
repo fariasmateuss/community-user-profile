@@ -4,7 +4,7 @@ import { Users } from '../../shared/types/Users';
 
 import { USERNAME_KEY } from '../../constants/params';
 
-import api from '../../services/api';
+import api from '../../services/github.api';
 
 function useUserData() {
   const [user, setUser] = useState<Users | null>(null);
