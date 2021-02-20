@@ -10,9 +10,8 @@
   max-width: 450px;
   font-size: 3rem;
   line-height: 3.5rem;
-  padding: 0 0 3px 0;
   color: var(--topic);
-  margin-top: 5rem;
+  margin: 5rem 0 5rem;
   background: linear-gradient(
     270.97deg,
     #ffe580 -21.36%,
