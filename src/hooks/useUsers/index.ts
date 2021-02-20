@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import { Users } from '../../shared/types/Users';
+import { Users } from '../../shared/types/github';
 
 import { USERNAME_KEY } from '../../constants/params';
 
