@@ -8,7 +8,8 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--front-color) url(../assets/img/github.svg) fixed no-repeat 80% top;
+  background: var(--front-color) url(../assets/img/github.svg) fixed no-repeat
+    80% top;
 }
 
 button {
@@ -27,6 +28,7 @@ button {
   --number-title: #666666;
   --title: #555555;
   --text: #666666;
+  --text-article: #24292e;
   --icon: #c4c4c4;
   --bg: #efefef;
   --front-color: #f0f0f0;
