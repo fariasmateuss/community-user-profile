@@ -1,10 +1,18 @@
 {
-  "name": "github-user-profile",
-  "author": "Mateus V. Farias",
-  "description": "GitHub User Profile",
-  "repository": {"type": "git", "url": "https://github.com/fariasmateuss/github-user-profile.git"},
+  "name": "community-user-profile",
+  "description": "Community User Profile",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fariasmateuss/community-user-profile.git"
+  },
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "email": "mateus_vinicius15@outlook.com",
+    "name": "Mateus V. Farias",
+    "url": "https://github.com/fariasmateuss/community-user-profile"
+  },
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
