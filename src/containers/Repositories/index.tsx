@@ -14,13 +14,13 @@ function Repositories() {
     <main>
       <Header title="Open source projects" emoji="👨‍🚀" returnToProfile />
 
-      <article className="wrapper-repositories">
+      <section className="wrapper-repositories">
         {repositories.map(repository => (
-          <section key={repository.id} className="repository">
+          <article key={repository.id} className="repository">
             <Repository repositories={repository} />
-          </section>
+          </article>
         ))}
-      </article>
+      </section>
     </main>
   );
 }
