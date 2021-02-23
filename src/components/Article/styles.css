@@ -1,0 +1,33 @@
+.thumbnail {
+  width: 100%;
+  height: 100%;
+}
+
+.headline {
+  font-size: 1.3rem;
+  margin: 0.9rem 1.3rem 0.9rem 1.3rem;
+}
+
+.representation {
+  display: flex;
+  align-items: center;
+  margin-top: 0.9rem;
+}
+
+.representation img {
+  margin: 0 0.7rem 0 1.3rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.representation strong {
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: block;
+}
+
+.representation strong:nth-child(2) {
+  font-weight: 300;
+  line-height: 1.7;
+}
