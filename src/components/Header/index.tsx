@@ -11,7 +11,7 @@ function Header({ returnToProfile, title, emoji }: HeaderProps) {
     <header className="wrapper-header">
       <h1 className="topic">
         {title}{' '}
-        <span className="emoji" role="img" aria-label="Astronaut">
+        <span className="emoji" role="img" aria-label="Emoji">
           {emoji}
         </span>
       </h1>

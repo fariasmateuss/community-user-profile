@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { Repos } from '../../shared/types/Repositories';
+import { Repos } from '../../shared/types/github';
 
 import { USERNAME_KEY } from '../../constants/params';
 
-import api from '../../services/api';
+import api from '../../services/github.api';
 
 function useRepositoriesData() {
   const [repositories, setRepositories] = useState<Repos[]>([]);

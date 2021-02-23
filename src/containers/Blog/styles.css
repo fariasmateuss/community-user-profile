@@ -1,16 +1,17 @@
-.wrapper-repositories {
+.wrapper-articles {
   display: grid;
   grid-gap: 20px;
   margin: 0px 20px 20px;
 }
 
-.repository {
+.article {
   background: var(--primary);
   border: 1px solid var(--border-box);
   border-radius: 6px;
+  color: var(--text-article);
   transition: transform 0.2s;
 }
 
-.repository:hover {
+.article:hover {
   transform: translate(10px);
 }
