@@ -1,20 +1,22 @@
-<p align="center">
-  <img src="docs/resources/card.png" width="49%" />
-  <img src="docs/resources/repositories.png" width="49%" />
+<p float="center">
+  <img src="docs/resources/card.png" width="32%" />
+  <img src="docs/resources/repositories.png" width="32%" />
+  <img src="docs/resources/articles.png" width="32%" />
 </p>
 
 ## Table of Contents
 
-* [Tech](#Tech)
-* [Usage](#Usage)
-* [API](#API)
-  * [Get a user](#Get-a-user)
-  * [List repositories for a user](#List-repositories-for-a-user)
-* [Development setup](#Development-setup)
-  * [Cloning this repository](#Cloning-this-repository)
-  * [Installation](#Installation)
-* [Feedback](#Feedback)
-* [License](#License)
+- [Tech](#Tech)
+- [Usage](#Usage)
+- [API](#API)
+  - [Get a user](#Get-a-user)
+  - [List repositories for a user](#List-repositories-for-a-user)
+  - [List articles for a user](#List-articles-for-a-user)
+- [Development setup](#Development-setup)
+  - [Cloning this repository](#Cloning-this-repository)
+  - [Installation](#Installation)
+- [Feedback](#Feedback)
+- [License](#License)
 
 ## Tech
 
@@ -27,7 +29,7 @@ This project was bootstrapped with [Create React App](https://create-react-app.d
 
 ## API
 
-In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) REST endpoints.
+In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) and [DEV Community](https://docs.dev.to/api/) REST endpoints.
 
 #### `Get a user`
 
@@ -45,6 +47,14 @@ Lists public repositories for the specified user.
 curl https://api.github.com/users/{username}/repos
 ```
 
+#### `List articles for a user`
+
+Lists articles for the specified user.
+
+```
+curl https://dev.to/api/articles?username={username}
+```
+
 ## Development setup
 
 To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
@@ -52,7 +62,7 @@ To run this project in the development mode, you'll need to have a basic environ
 #### Cloning this repository
 
 ```
-git clone https://github.com/fariasmateuss/github-user-profile.git
+git clone https://github.com/fariasmateuss/community-user-profile.git
 
 ```
 
