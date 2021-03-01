@@ -3,13 +3,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { HiOutlineMail } from 'react-icons/hi';
 
-import SocialMedia from '../../components/SocialMedia';
+import { SocialMedia } from '../../components/SocialMedia';
 
 import useUsers from '../../hooks/useUsers';
 
 import './styles.css';
 
-function Profile() {
+export function Profile() {
   const user = useUsers();
 
   return (
@@ -84,5 +84,3 @@ function Profile() {
     </main>
   );
 }
-
-export default Profile;

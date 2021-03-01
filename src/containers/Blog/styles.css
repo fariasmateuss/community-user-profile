@@ -6,9 +6,8 @@
 
 .article {
   background: var(--primary);
-  border: 1px solid var(--border-box);
+  border: 2px solid var(--border-box);
   border-radius: 6px;
-  color: var(--text-article);
   transition: transform 0.2s;
 }
 

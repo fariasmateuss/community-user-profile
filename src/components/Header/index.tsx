@@ -6,7 +6,7 @@ import { HeaderProps } from './types';
 
 import './styles.css';
 
-function Header({ returnToProfile, title, emoji }: HeaderProps) {
+export function Header({ returnToProfile, title, emoji }: HeaderProps) {
   return (
     <header className="wrapper-header">
       <h1 className="topic">
@@ -25,5 +25,3 @@ function Header({ returnToProfile, title, emoji }: HeaderProps) {
     </header>
   );
 }
-
-export default Header;

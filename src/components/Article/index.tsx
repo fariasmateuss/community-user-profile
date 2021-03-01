@@ -4,7 +4,7 @@ import { ArticleProps } from './types';
 
 import './styles.css';
 
-function Article({ articles }: ArticleProps) {
+export function Article({ articles }: ArticleProps) {
   const {
     title,
     social_image,
@@ -32,5 +32,3 @@ function Article({ articles }: ArticleProps) {
     </div>
   );
 }
-
-export default Article;

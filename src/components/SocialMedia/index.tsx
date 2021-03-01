@@ -1,12 +1,11 @@
 import React from 'react';
 
+import { socialMedia } from '../../model/data';
 import { NavigationItemProps } from './types';
-
-import socialMedia from '../../data/socialMedia';
 
 import './styles.css';
 
-function SocialMedia() {
+export function SocialMedia() {
   return (
     <nav className="icons-container">
       {socialMedia.map(({ icon, url }: NavigationItemProps, index) => (
@@ -17,5 +16,3 @@ function SocialMedia() {
     </nav>
   );
 }
-
-export default SocialMedia;

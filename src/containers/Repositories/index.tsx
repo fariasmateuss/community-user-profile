@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Repository from '../../components/Repository';
-import Header from '../../components/Header';
+import { Repository } from '../../components/Repository';
+import { Header } from '../../components/Header';
 
 import useRepositories from '../../hooks/useRepositories';
 
 import './styles.css';
 
-function Repositories() {
+export function Repositories() {
   const repositories = useRepositories();
 
   return (
@@ -24,5 +24,3 @@ function Repositories() {
     </main>
   );
 }
-
-export default Repositories;

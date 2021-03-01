@@ -1,11 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Blog from '../containers/Blog';
-import Profile from '../containers/Profile';
-import Repositories from '../containers/Repositories';
+import { Blog } from '../containers/Blog';
+import { Profile } from '../containers/Profile';
+import { Repositories } from '../containers/Repositories';
 
-function Router() {
+export function Router() {
   return (
     <BrowserRouter>
       <Routes>
@@ -16,5 +16,3 @@ function Router() {
     </BrowserRouter>
   );
 }
-
-export default Router;
