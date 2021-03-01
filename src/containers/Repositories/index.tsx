@@ -2,8 +2,7 @@ import React from 'react';
 
 import { Repository } from '../../components/Repository';
 import { Header } from '../../components/Header';
-
-import useRepositories from '../../hooks/useRepositories';
+import { useRepositories } from '../../hooks/useRepositories';
 
 import './styles.css';
 

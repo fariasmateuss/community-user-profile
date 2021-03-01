@@ -6,7 +6,7 @@ import { USERNAME_KEY } from '../../constants/params';
 
 import { api } from '../../services/github.api';
 
-function useUserData() {
+export function useUsers() {
   const [user, setUser] = useState<Users | null>(null);
 
   useEffect(() => {
@@ -21,5 +21,3 @@ function useUserData() {
 
   return user;
 }
-
-export default useUserData;
