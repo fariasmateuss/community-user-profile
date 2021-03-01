@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { Users } from '../../shared/types/github';
+import { Users } from '../../shared/github';
 
 import { USERNAME_KEY } from '../../constants/params';
 
-import api from '../../services/github.api';
+import { api } from '../../services/github.api';
 
 function useUserData() {
   const [user, setUser] = useState<Users | null>(null);

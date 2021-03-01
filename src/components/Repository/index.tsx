@@ -7,7 +7,7 @@ import { RepositoryProps } from './types';
 
 import './styles.css';
 
-function Repository({ repositories }: RepositoryProps) {
+export function Repository({ repositories }: RepositoryProps) {
   const {
     full_name,
     description,
@@ -49,5 +49,3 @@ function Repository({ repositories }: RepositoryProps) {
     </div>
   );
 }
-
-export default Repository;

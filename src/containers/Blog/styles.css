@@ -6,12 +6,12 @@
 
 .article {
   background: var(--primary);
-  border: 1px solid var(--border-box);
+  border: 2px solid var(--border-box);
   border-radius: 6px;
-  color: var(--text-article);
-  transition: transform 0.2s;
+  transition: all 0.4s ease;
 }
 
 .article:hover {
-  transform: translate(10px);
+  -webkit-transform: translate3D(0, -1px, 0) scale(1.02);
+  transform: translate3D(0, -1px, 0) scale(1.02);
 }

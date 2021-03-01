@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { Articles } from '../../shared/types/devto';
+import { Articles } from '../../shared/devto';
 
 import { USERNAME_KEY } from '../../constants/params';
 
-import api from '../../services/devto.api';
+import { api } from '../../services/devto.api';
 
 function useArticlesData() {
   const [articles, setArticles] = useState<Articles[]>([]);
@@ -14,6 +14,7 @@ function useArticlesData() {
       setArticles(response.data);
     });
   }, []);
+
   return articles;
 }
 

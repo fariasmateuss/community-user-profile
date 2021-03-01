@@ -8,12 +8,10 @@ import {
   AiFillTwitterSquare,
 } from 'react-icons/ai';
 import { SiDevDotTo } from 'react-icons/si';
-
 import { USERNAME_KEY } from '../constants/params';
-
 import { NavigationItems } from '../components/SocialMedia/types';
 
-const socialMedia: NavigationItems = [
+export const socialMedia: NavigationItems = [
   {
     icon: <AiFillGithub />,
     url: `https://github.com/${USERNAME_KEY}`,
@@ -39,5 +37,3 @@ const socialMedia: NavigationItems = [
     url: `https://www.youtube.com/channel/UC2dD4ZlE8zuMoVGOP3jdB8g`,
   },
 ];
-
-export default socialMedia;
