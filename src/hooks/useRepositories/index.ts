@@ -6,7 +6,7 @@ import { USERNAME_KEY } from '../../constants/params';
 
 import { api } from '../../services/github.api';
 
-function useRepositoriesData() {
+export function useRepositories() {
   const [repositories, setRepositories] = useState<Repos[]>([]);
 
   useEffect(() => {
@@ -17,5 +17,3 @@ function useRepositoriesData() {
 
   return repositories;
 }
-
-export default useRepositoriesData;

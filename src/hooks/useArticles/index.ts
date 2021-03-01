@@ -6,7 +6,7 @@ import { USERNAME_KEY } from '../../constants/params';
 
 import { api } from '../../services/devto.api';
 
-function useArticlesData() {
+export function useArticles() {
   const [articles, setArticles] = useState<Articles[]>([]);
 
   useEffect(() => {
@@ -17,5 +17,3 @@ function useArticlesData() {
 
   return articles;
 }
-
-export default useArticlesData;
