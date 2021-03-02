@@ -12,6 +12,7 @@
 }
 
 .repository:hover {
+  border: 1px solid var(--border);
   -webkit-transform: translate3D(0, -1px, 0) scale(1.02);
   transform: translate3D(0, -1px, 0) scale(1.02);
 }
