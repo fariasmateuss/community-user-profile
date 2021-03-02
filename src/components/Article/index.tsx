@@ -17,18 +17,18 @@ export function Article({ articles }: ArticleProps) {
     <div>
       <a href={canonical_url} target="blank">
         <img src={social_image} alt={title} className="thumbnail" />
-      </a>
 
-      <div className="representation">
-        <img src={user.profile_image_90} alt={user.name} />
+        <div className="representation">
+          <img src={user.profile_image_90} alt={user.name} />
 
-        <div>
-          <strong>{user.name}</strong>
-          <strong>{readable_publish_date}</strong>
+          <div>
+            <strong>{user.name}</strong>
+            <strong>{readable_publish_date}</strong>
+          </div>
         </div>
-      </div>
 
-      <h1 className="headline">{title}</h1>
+        <h1 className="headline">{title}</h1>
+      </a>
     </div>
   );
 }
