@@ -1,4 +1,4 @@
-import { Articles } from '../../shared/devto';
+import { Articles } from '../../shared';
 
 export interface ArticleProps {
   articles: Articles;

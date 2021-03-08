@@ -1,4 +1,4 @@
-import { Repos } from '../../shared/github';
+import { Repos } from '../../shared';
 
 export interface RepositoryProps {
   repositories: Repos;
