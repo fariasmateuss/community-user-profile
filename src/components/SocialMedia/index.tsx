@@ -9,7 +9,13 @@ export function SocialMedia() {
   return (
     <nav className="icons-container">
       {socialMedia.map(({ icon, url }: NavigationItemProps, index) => (
-        <a key={String(index)} href={url} target="blank" className="icon">
+        <a
+          key={String(index)}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="icon"
+        >
           {icon}
         </a>
       ))}

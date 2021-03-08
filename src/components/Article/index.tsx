@@ -15,7 +15,7 @@ export function Article({ articles }: ArticleProps) {
 
   return (
     <div>
-      <a href={canonical_url} target="blank">
+      <a href={canonical_url} target="_blank" rel="noopener noreferrer">
         <img src={social_image} alt={title} className="thumbnail" />
 
         <div className="representation">
