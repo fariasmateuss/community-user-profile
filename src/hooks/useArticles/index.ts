@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react';
-
-import { Articles } from '../../shared/devto';
-
+import { Articles } from '../../shared';
 import { USERNAME_KEY } from '../../constants/params';
-
 import { api } from '../../services/devto.api';
 
 export function useArticles() {
