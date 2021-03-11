@@ -33,7 +33,7 @@ a {
   --number-title: #666666;
   --title: #555555;
   --text: #666666;
-  --text-article: #24292e;
+  --text-article: #3a3a3a;
   --icon: #c4c4c4;
   --bg: #efefef;
   --front-color: #f0f0f0;
@@ -56,5 +56,6 @@ a {
   --dart: #00b4ab;
   --scss: #c6538c;
   --dockerfile: #384d54;
+  --html: #e34c26;
   --other: #9e9e9e;
 }

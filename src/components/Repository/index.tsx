@@ -24,7 +24,7 @@ export function Repository({ repositories }: RepositoryProps) {
       <a href={html_url} target="blank">
         <div className="top-side">
           <header className="header-box">
-            <RiBookMarkLine className="icon-box" />
+            <RiBookMarkLine />
             <p className="anchor-box">{full_name}</p>
           </header>
           <p className="description-box">{description}</p>
@@ -36,11 +36,11 @@ export function Repository({ repositories }: RepositoryProps) {
               <span className="icon-inner">{language}</span>
             </li>
             <li className="icon-wrap">
-              <RiStarLine className="icon-box" />
+              <RiStarLine />
               <span className="icon-inner">{stargazers_count}</span>
             </li>
             <li className="icon-wrap">
-              <AiOutlineFork className="icon-box" />
+              <AiOutlineFork />
               <span className="icon-inner">{forks_count}</span>
             </li>
           </ul>
