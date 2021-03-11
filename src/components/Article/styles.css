@@ -1,4 +1,4 @@
-.thumbnail {
+.cover {
   width: 100%;
   height: 100%;
 }
@@ -6,6 +6,7 @@
 .headline {
   font-size: 1.3rem;
   margin: 0.9rem 1.3rem 0.9rem 1.3rem;
+  color: var(--text-article);
 }
 
 .representation {
@@ -22,12 +23,36 @@
 }
 
 .representation strong {
+  display: block;
   font-size: 0.75rem;
   font-weight: 500;
-  display: block;
+  color: var(--text-article);
 }
 
 .representation strong:nth-child(2) {
   font-weight: 300;
   line-height: 1.7;
+}
+
+.reactions-wrap {
+  margin: 0.9rem 1.3rem 0.9rem 1.3rem;
+}
+
+.reactions-box {
+  display: flex;
+  align-items: center;
+}
+
+.reactions-inner {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.reactions-inner svg {
+  margin-right: 0.3rem;
+  font-size: 1rem;
+  fill: var(--icon-box);
 }
