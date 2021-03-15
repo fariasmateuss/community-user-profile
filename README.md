@@ -7,14 +7,13 @@
 ## Table of Contents
 
 - [Tech](#Tech)
+- [Getting Started](#Getting-Started)
 - [Usage](#Usage)
-- [REST endpoints](#REST-endpoints)
   - [GitHub](#GitHub)
     - [Get a user](#Get-a-user)
     - [List repositories for a user](#List-repositories-for-a-user)
   - [DEV Community](#DEV-Community)
     - [List articles for a user](#List-articles-for-a-user)
-- [Getting Started](#Getting-Started)
 - [Contributing](#Contributing)
 - [License](#License)
 
@@ -23,15 +22,44 @@
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 - [React](https://reactjs.org) - A JavaScript library for building user interfaces.
 
+> This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
+
+## Getting Started
+
+1. To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed;
+
+2. Clone this repository:
+
+```
+git clone https://github.com/fariasmateuss/community-user-profile.git
+```
+
+3. In the project directory, install all dependencies:
+
+```
+yarn
+```
+
+4. Runs the app in the development mode:
+
+```
+yarn start
+```
+
+5. And finally open [http://localhost:3000](http://localhost:3000) to view it in the browser;
+
+The page will reload if you make edits. <br />
+You will also see any lint errors in the console.
+
 ## Usage
 
-This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
+Getting started add your username in the [USERNAME_KEY](https://github.com/fariasmateuss/community-user-profile/blob/fdeb1264e3f21ffe96c2e45c8ca105200c6c853a/src/constants/params.ts#L1) variable.
 
-## REST endpoints
+| key          | description                     | default         |
+| ------------ | ------------------------------- | --------------- |
+| USERNAME_KEY | Username used in REST Endpoints | `fariasmateuss` |
 
 In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) and [DEV Community](https://docs.dev.to/api/) REST endpoints.
-
-Getting started add your username in the [USERNAME_KEY](https://github.com/fariasmateuss/community-user-profile/blob/fdeb1264e3f21ffe96c2e45c8ca105200c6c853a/src/constants/params.ts#L1) variable.
 
 ### GitHub
 
@@ -60,34 +88,6 @@ Lists articles for the specified user.
 ```
 curl https://dev.to/api/articles?username={USERNAME_KEY}
 ```
-
-## Getting Started
-
-1. To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
-
-2. Clone this repository:
-
-```
-git clone https://github.com/fariasmateuss/community-user-profile.git
-
-```
-
-3. In the project directory, install all dependencies:
-
-```
-yarn
-```
-
-4. Runs the app in the development mode.
-
-```
-yarn start
-```
-
-5. And finally open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits. <br />
-You will also see any lint errors in the console.
 
 ## Contributing
 
