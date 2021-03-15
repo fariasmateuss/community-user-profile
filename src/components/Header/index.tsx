@@ -1,27 +1,24 @@
 import React from 'react';
 
-import { Link } from 'react-router-dom';
-import { FiChevronLeft } from 'react-icons/fi';
 import { HeaderProps } from './types';
-
-import './styles.css';
+import { ChevronLeft, HeaderWrapper, LinkToProfile } from './styles';
 
 export function Header({ returnToProfile, title, emoji }: HeaderProps) {
   return (
-    <header className="wrapper-header">
-      <h1 className="topic">
+    <HeaderWrapper>
+      <h1>
         {title}{' '}
-        <span className="emoji" role="img" aria-label="Emoji">
+        <span role="img" aria-label="Emoji">
           {emoji}
         </span>
       </h1>
 
       {returnToProfile && (
-        <Link className="anchor-return" to="/">
-          <FiChevronLeft size={16} />
+        <LinkToProfile to="/">
+          <ChevronLeft />
           Return
-        </Link>
+        </LinkToProfile>
       )}
-    </header>
+    </HeaderWrapper>
   );
 }

@@ -4,7 +4,7 @@ import { Article } from '../../components/Article';
 import { Header } from '../../components/Header';
 import { useArticles } from '../../hooks/useArticles';
 
-import './styles.css';
+import { ContainersWrapper } from '../../styles/components';
 
 export function Blog() {
   const articles = useArticles();
@@ -13,13 +13,13 @@ export function Blog() {
     <main>
       <Header title="Hipsters Tech Post's" emoji="⚡️" returnToProfile />
 
-      <section className="wrapper-articles">
+      <ContainersWrapper>
         {articles.map(article => (
-          <article key={article.id} className="article">
+          <article key={article.id}>
             <Article articles={article} />
           </article>
         ))}
-      </section>
+      </ContainersWrapper>
     </main>
   );
 }

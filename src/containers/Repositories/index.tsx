@@ -4,7 +4,7 @@ import { Repository } from '../../components/Repository';
 import { Header } from '../../components/Header';
 import { useRepositories } from '../../hooks/useRepositories';
 
-import './styles.css';
+import { ContainersWrapper } from '../../styles/components';
 
 export function Repositories() {
   const repositories = useRepositories();
@@ -13,13 +13,13 @@ export function Repositories() {
     <main>
       <Header title="Open source projects" emoji="👨‍🚀" returnToProfile />
 
-      <section className="wrapper-repositories">
+      <ContainersWrapper>
         {repositories.map(repository => (
-          <article key={repository.id} className="repository">
+          <article key={repository.id}>
             <Repository repositories={repository} />
           </article>
         ))}
-      </section>
+      </ContainersWrapper>
     </main>
   );
 }

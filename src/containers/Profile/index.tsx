@@ -1,11 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import { HiOutlineMail } from 'react-icons/hi';
 import { SocialMedia } from '../../components/SocialMedia';
 import { useUsers } from '../../hooks/useUsers';
 
-import './styles.css';
+import {
+  Wrapper,
+  CardCover,
+  CardStrip,
+  HamburgerMenu,
+  Mail,
+  OutlineMail,
+  Main,
+  CardBody,
+  AboutColumn,
+  Buttons,
+  FirstToggle,
+  SecondToggle,
+  AsideColumn,
+} from './styles';
 
 export function Profile() {
   const user = useUsers();
@@ -13,71 +25,60 @@ export function Profile() {
   return (
     <main>
       {user && (
-        <div className="wrapper-profile">
-          <div className="card">
-            <div className="division">
-              <div className="hamburger-menu">
-                <div className="center" />
-              </div>
-              <a href="mailto:mateus_vinicius15@outlook.com" className="mail">
-                <HiOutlineMail size={30} />
-              </a>
-              <div className="main">
-                <div className="image">
-                  <img
-                    className="avatar"
-                    src={user.avatar_url}
-                    alt={user.name}
-                  />
+        <Wrapper>
+          <CardCover>
+            <CardStrip>
+              <HamburgerMenu>
+                <div />
+              </HamburgerMenu>
+              <Mail href="mailto:mateus_vinicius15@outlook.com">
+                <OutlineMail size={28} />
+              </Mail>
+              <Main>
+                <div>
+                  <img src={user.avatar_url} alt={user.name} />
                 </div>
-                <h3 className="name">{user.name}</h3>
-                <h3 className="sub-location">
-                  <span className="icon-location" />
-                  {user.location}
-                </h3>
-              </div>
-            </div>
+                <h2>{user.name}</h2>
+                <h3>{user.location}</h3>
+              </Main>
+            </CardStrip>
 
-            <div className="content">
-              <div className="left">
-                <div className="about-container">
-                  <h3 className="title">About</h3>
-                  <p className="text">{user.bio}</p>
-                </div>
+            <CardBody>
+              <div>
+                <AboutColumn>
+                  <h3>About</h3>
+                  <p>{user.bio}</p>
+                </AboutColumn>
 
                 <SocialMedia />
 
-                <div className="buttons-wrap">
-                  <div className="first-wrap">
-                    <Link to="/blog" className="first">
-                      Blog
-                    </Link>
+                <Buttons>
+                  <div>
+                    <FirstToggle to="/blog">Blog</FirstToggle>
                   </div>
-                  <div className="second-wrap">
-                    <Link to="/repositories" className="second">
-                      Projects
-                    </Link>
+                  <div>
+                    <SecondToggle to="/repositories">Projects</SecondToggle>
                   </div>
-                </div>
+                </Buttons>
               </div>
 
-              <div className="right">
+              <AsideColumn>
                 <div>
-                  <h3 className="number">{user.public_repos}</h3>
-                  <h3 className="number-title">Repositories</h3>
+                  <h2>{user.public_repos}</h2>
+                  <h3>Repositories</h3>
                 </div>
                 <div>
-                  <h3 className="number">{user.following}</h3>
-                  <h3 className="number-title">Following</h3>
+                  <h2>{user.following}</h2>
+                  <h3>Following</h3>
                 </div>
                 <div>
-                  <h3 className="number">{user.followers}</h3>
-                  <h3 className="number-title">Followers</h3>
+                  <h2>{user.followers}</h2>
+                  <h3>Followers</h3>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
+              </AsideColumn>
+            </CardBody>
+          </CardCover>
+        </Wrapper>
       )}
     </main>
   );

@@ -1,10 +1,14 @@
 import React from 'react';
 
-import { AiOutlineHeart, AiOutlineComment } from 'react-icons/ai';
-
 import { ArticleProps } from './types';
-
-import './styles.css';
+import {
+  Thumbnail,
+  PostOwner,
+  Headline,
+  PostReactions,
+  OutlineComment,
+  OutlineHeart,
+} from './styles';
 
 export function Article({ articles }: ArticleProps) {
   const {
@@ -20,31 +24,31 @@ export function Article({ articles }: ArticleProps) {
   return (
     <div>
       <a href={canonical_url} target="_blank" rel="noopener noreferrer">
-        <img src={social_image} alt={title} className="cover" />
+        <Thumbnail src={social_image} alt={title} />
 
-        <div className="representation">
+        <PostOwner>
           <img src={user.profile_image_90} alt={user.name} />
 
           <div>
             <strong>{user.name}</strong>
             <strong>{readable_publish_date}</strong>
           </div>
-        </div>
+        </PostOwner>
 
-        <h1 className="headline">{title}</h1>
+        <Headline>{title}</Headline>
 
-        <div className="reactions-wrap">
-          <ul className="reactions-box">
-            <li className="reactions-inner">
-              <AiOutlineHeart className="reaction-icon" />{' '}
+        <PostReactions>
+          <ul>
+            <li>
+              <OutlineHeart />
               {public_reactions_count} reactions
             </li>
-            <li className="reactions-inner">
-              <AiOutlineComment className="reaction-icon" /> {comments_count}{' '}
-              comments
+            <li>
+              <OutlineComment />
+              {comments_count} comments
             </li>
           </ul>
-        </div>
+        </PostReactions>
       </a>
     </div>
   );
