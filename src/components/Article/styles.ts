@@ -23,7 +23,7 @@ export const PostOwner = styled.div`
     display: block;
     font-size: 0.75rem;
     font-weight: 500;
-    color: ${props => props.theme.colors['text-article']};
+    color: ${props => props.theme.colors['shuttle-gray']};
 
     &:last-child {
       font-weight: 300;
@@ -50,7 +50,7 @@ export const PostReactions = styled.div`
       align-items: center;
       margin-right: 1rem;
       font-size: 0.85rem;
-      color: ${props => props.theme.colors['text-article']};
+      color: ${props => props.theme.colors['shuttle-gray']};
     }
   }
 `;
