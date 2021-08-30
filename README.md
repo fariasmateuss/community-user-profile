@@ -1,55 +1,71 @@
-<p float="center">
-  <img src="docs/resources/card.png" width="32%" />
-  <img src="docs/resources/repositories.png" width="32%" />
-  <img src="docs/resources/articles.png" width="32%" />
+<p align="center">
+  <img src="./public/favicon.png" width="150" />
 </p>
 
-## Table of Contents
+<p align="center">
+  Profile page, but for developers.
+</p>
 
-- [Tech](#Tech)
-- [Getting Started](#Getting-Started)
-- [Usage](#Usage)
-  - [GitHub](#GitHub)
-    - [Get a user](#Get-a-user)
-    - [List repositories for a user](#List-repositories-for-a-user)
-  - [DEV Community](#DEV-Community)
-    - [List articles for a user](#List-articles-for-a-user)
-- [Contributing](#Contributing)
-- [License](#License)
+## Screenshots
+
+<p float="center">
+  <img src="docs/resources/card.png" width="49%" />
+  <img src="docs/resources/repositories.png" width="49%" />
+</p>
 
 ## Tech
 
+<img src="docs/resources/tech-logos.png" alt="Technologies used">
+<br />
+
+This project was developed using cutting edge front-end technologies.
+
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
-- [React](https://reactjs.org) - A JavaScript library for building user interfaces.
+- [Next.js](https://nextjs.org/) - The Next.js is React Based framework with server side rendering capability.
 
-> This project was bootstrapped with [Create React App](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
+## Run Locally
 
-## Getting Started
+Clone the project
 
-1. To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed;
-
-2. Clone this repository:
-
-```
+```bash
 git clone https://github.com/fariasmateuss/community-user-profile.git
 ```
 
-3. In the project directory, install all dependencies:
+Go to the project directory
 
+```bash
+cd community-user-profile
 ```
+
+Install dependencies
+
+> To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
+
+```bash
 yarn
 ```
 
-4. Runs the app in the development mode:
+Start the server
 
+```bash
+yarn dev
 ```
-yarn start
+
+_or_
+
+```bash
+yarn next
 ```
 
-5. And finally open [http://localhost:3000](http://localhost:3000) to view it in the browser;
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The page will reload if you make edits. <br />
-You will also see any lint errors in the console.
+## Deployment
+
+To deploy this project run
+
+```bash
+yarn build
+```
 
 ## Usage
 
@@ -59,35 +75,7 @@ Getting started add your username in the [USERNAME_KEY](https://github.com/faria
 | ------------ | ------------------------------- | --------------- |
 | USERNAME_KEY | Username used in REST Endpoints | `fariasmateuss` |
 
-In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) and [DEV Community](https://docs.dev.to/api/) REST endpoints.
-
-### GitHub
-
-#### `Get a user`
-
-Provides publicly available information about someone with a GitHub account.
-
-```
-curl https://api.github.com/users/{USERNAME_KEY}
-```
-
-#### `List repositories for a user`
-
-Lists public repositories for the specified user.
-
-```
-curl https://api.github.com/users/{USERNAME_KEY}/repos
-```
-
-### DEV Community
-
-#### `List articles for a user`
-
-Lists articles for the specified user.
-
-```
-curl https://dev.to/api/articles?username={USERNAME_KEY}
-```
+In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) REST endpoints.
 
 ## Contributing
 
