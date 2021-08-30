@@ -1,9 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
-import backgroungImage from '../assets/img/github.svg';
-
 export default createGlobalStyle`
-  * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,8 +10,8 @@ export default createGlobalStyle`
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: ${props =>
-    props.theme.colors['athens-gray']} url(${backgroungImage}) fixed no-repeat
+   background: ${({ theme }) =>
+     theme.colors['athens-gray']} url('bg.svg') fixed no-repeat
     80% top;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
@@ -28,7 +26,7 @@ a {
   color: currentColor;
 }
 
-#root {
+#__next {
   max-width: 700px;
   width: 100%;
   margin: 0 auto;
