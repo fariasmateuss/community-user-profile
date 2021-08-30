@@ -3,22 +3,21 @@
 </p>
 
 <p align="center">
-  Profile page, but for developers.
+  <strong>Profile page, but for developers.</strong>
 </p>
 
 ## Screenshots
 
-<p float="center">
-  <img src="docs/resources/card.png" width="49%" />
-  <img src="docs/resources/repositories.png" width="49%" />
+<p align="center">
+  <img src="docs/resources/card.png" width="45%" />
+  <img src="docs/resources/repositories.png" width="45%" />
 </p>
 
 ## Tech
 
-<img src="docs/resources/tech-logos.png" alt="Technologies used">
-<br />
-
 This project was developed using cutting edge front-end technologies.
+
+<img src="docs/resources/tech-logos.png" alt="Technologies used">
 
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 - [Next.js](https://nextjs.org/) - The Next.js is React Based framework with server side rendering capability.
