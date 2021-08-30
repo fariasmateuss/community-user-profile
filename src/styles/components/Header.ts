@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
-import { FiChevronLeft } from 'react-icons/fi';
+import { BsArrowLeft } from 'react-icons/bs';
 
 export const HeaderWrapper = styled.header`
   display: flex;
@@ -51,4 +51,12 @@ export const LinkToProfile = styled.a`
   }
 `;
 
-export const ChevronLeft = styled(FiChevronLeft)``;
+export const ArrowLeft = styled(BsArrowLeft)`
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s ease 0s;
+
+  &:hover {
+    transform: translateX(-5px);
+  }
+`;

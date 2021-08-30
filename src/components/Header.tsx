@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
 import {
-  ChevronLeft,
+  ArrowLeft,
   HeaderWrapper,
   LinkToProfile,
 } from '../styles/components/Header';
 
 type HeaderProps = {
-  returnToProfile?: boolean;
+  returnToProfile: boolean;
   title: string;
   emoji: string;
 };
@@ -25,8 +25,7 @@ export function Header({ returnToProfile, title, emoji }: HeaderProps) {
       {returnToProfile && (
         <Link href="/">
           <LinkToProfile>
-            <ChevronLeft />
-            Return
+            <ArrowLeft />
           </LinkToProfile>
         </Link>
       )}
