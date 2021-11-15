@@ -68,24 +68,24 @@ yarn build
 
 ## Usage
 
-Getting started add your username in the [USERNAME_KEY](https://github.com/fariasmateuss/community-user-profile/blob/fdeb1264e3f21ffe96c2e45c8ca105200c6c853a/src/constants/params.ts#L1) variable.
+In the `src/constants/params.ts` directory, you can change to your username:
 
 | key          | description                     | default         |
 | ------------ | ------------------------------- | --------------- |
-| USERNAME_KEY | Username used in REST Endpoints | `fariasmateuss` |
-
-In this project, there are requests for the following [GitHub](https://docs.github.com/en/rest) REST endpoints.
+| USERNAME_KEY | Username used in [GitHub](https://docs.github.com/en/rest) REST Endpoints | `fariasmateuss` |
 
 ## Contributing
 
 You can send how many PR's do you want, I'll be glad to analyse and accept them! And if you have any question about the project...
 
-Connect with me at [LinkedIn](https://www.linkedin.com/in/fariasmateuss/)
-
 Thank you!
+
+## Contact me 
+
+Connect with me at [LinkedIn](https://www.linkedin.com/in/fariasmateuss/)
 
 # License
 
-Made with ♥ by Mateus V. Farias
-
 This project is under the [MIT License](/LICENSE)
+
+Made with ♥ by Mateus V. Farias
