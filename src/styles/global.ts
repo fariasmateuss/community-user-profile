@@ -19,6 +19,7 @@ body {
 
 button, a {
   cursor: pointer;
+  all: unset;
 }
 
 a {
