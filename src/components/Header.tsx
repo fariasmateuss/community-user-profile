@@ -9,18 +9,12 @@ import {
 type HeaderProps = {
   returnToProfile: boolean;
   title: string;
-  emoji: string;
 };
 
-export function Header({ returnToProfile, title, emoji }: HeaderProps) {
+export function Header({ returnToProfile, title }: HeaderProps) {
   return (
     <HeaderWrapper>
-      <h1>
-        {title}{' '}
-        <span role="img" aria-label="Emoji">
-          {emoji}
-        </span>
-      </h1>
+      <h1>{title}</h1>
 
       {returnToProfile && (
         <Link href="/">

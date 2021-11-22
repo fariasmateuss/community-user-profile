@@ -76,7 +76,7 @@ export default function Home({ user }: HomeProps) {
                   className="share"
                   onClick={() =>
                     shareURL({
-                      text: 'Find on the web.',
+                      text: 'Find me on the web',
                       title: `Hello. I'm Mateus V. Farias.`,
                       url: 'https://fariasmateuss.vercel.app/',
                     })

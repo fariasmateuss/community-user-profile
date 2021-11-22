@@ -36,7 +36,7 @@ export default function Repositories({ repositories }: RepositoriesProps) {
         <title>Work. Hobby. Open Source.</title>
       </Head>
 
-      <Header title="Open source projects" emoji="👨‍🚀" returnToProfile />
+      <Header title="Open source projects" returnToProfile />
 
       <Wrapper>
         {repositories.map(repository => (

@@ -10,7 +10,7 @@ export const HeaderWrapper = styled.header`
 
   h1 {
     position: relative;
-    max-width: 450px;
+    max-width: 550px;
     font-size: 3rem;
     line-height: 3.5rem;
     color: var(--topic);
@@ -31,10 +31,6 @@ export const HeaderWrapper = styled.header`
     @media screen and (max-width: 420px) {
       width: 260px;
       font-size: 2.6rem;
-    }
-
-    span {
-      -webkit-text-fill-color: currentColor;
     }
   }
 `;
