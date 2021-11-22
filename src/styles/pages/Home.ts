@@ -230,7 +230,7 @@ export const Buttons = styled.div`
   display: flex;
   margin-top: 5px;
 
-  div {
+  button {
     flex: 4;
     display: flex;
     justify-content: center;

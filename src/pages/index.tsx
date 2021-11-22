@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import { SocialMedia } from '../components/SocialMedia';
 import { USERNAME_KEY } from '../constants/params';
+import { shareURL } from '../utils/shareURL';
 import { api } from '../services/api';
 
 import {
@@ -70,16 +71,24 @@ export default function Home({ user }: HomeProps) {
               <SocialMedia />
 
               <Buttons>
-                <div>
-                  <Link href={`https://github.com/${USERNAME_KEY}`} passHref>
-                    <FirstToggle>Know More</FirstToggle>
-                  </Link>
-                </div>
-                <div>
+                <button
+                  type="button"
+                  className="share"
+                  onClick={() =>
+                    shareURL({
+                      text: 'Find on the web.',
+                      title: `Hello. I'm Mateus V. Farias.`,
+                      url: 'https://fariasmateuss.vercel.app/',
+                    })
+                  }
+                >
+                  <FirstToggle>Share</FirstToggle>
+                </button>
+                <button type="button">
                   <Link href="/repositories">
-                    <SecondToggle>Repositories</SecondToggle>
+                    <SecondToggle>Know More</SecondToggle>
                   </Link>
-                </div>
+                </button>
               </Buttons>
             </div>
 
