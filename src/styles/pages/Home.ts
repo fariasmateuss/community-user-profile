@@ -235,55 +235,49 @@ export const Buttons = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: 0.5s;
 
     &:hover {
       flex: 5;
     }
-  }
-`;
 
-export const FirstToggle = styled.div`
-  padding: 9.6px 0;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    ${({ theme }) => theme.colors['dodger-blue']} 0%,
-    ${({ theme }) => theme.colors.cyan} 140%
-  );
-  color: ${({ theme }) => theme.colors.white};
-  text-align: center;
-  text-decoration: none;
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 18.1px;
-  margin-right: 3px;
+    &:first-child {
+      padding: 9.6px 0;
+      background: linear-gradient(
+        to right,
+        ${({ theme }) => theme.colors['dodger-blue']} 0%,
+        ${({ theme }) => theme.colors.cyan} 140%
+      );
+      color: ${({ theme }) => theme.colors.white};
+      border-radius: 18.1px;
+      margin-right: 3px;
 
-  @media screen and (max-width: 370px) {
-    padding: 7.6px 0;
-    border-radius: 14.6px;
-    font-size: 0.6rem;
-  }
-`;
+      @media screen and (max-width: 370px) {
+        padding: 7.6px 0;
+        border-radius: 14.6px;
+        font-size: 0.6rem;
+      }
+    }
 
-export const SecondToggle = styled.div`
-  padding: 7.6px 0;
-  width: 100%;
-  border: 2px solid ${({ theme }) => theme.colors['dodger-blue']};
-  color: ${({ theme }) => theme.colors['dodger-blue']};
-  text-decoration: none;
-  text-align: center;
-  font-size: 0.7rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-left: 3px;
-  border-radius: 18.1px;
+    &:last-child {
+      padding: 7.6px 0;
+      border: 2px solid ${({ theme }) => theme.colors['dodger-blue']};
+      color: ${({ theme }) => theme.colors['dodger-blue']};
+      border-radius: 18.1px;
+      margin-left: 3px;
 
-  @media screen and (max-width: 370px) {
-    padding: 5.6px 0;
-    border-radius: 14.6px;
-    font-size: 0.6rem;
+      @media screen and (max-width: 370px) {
+        padding: 5.6px 0;
+        border-radius: 14.6px;
+        font-size: 0.6rem;
+      }
+    }
   }
 `;
 

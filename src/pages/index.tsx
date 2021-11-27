@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { SocialMedia } from '../components/SocialMedia';
+import { links } from '../constants/links';
 import { USERNAME_KEY } from '../constants/params';
 import { shareURL } from '../utils/shareURL';
 import { api } from '../services/api';
@@ -17,8 +18,6 @@ import {
   CardBody,
   AboutColumn,
   Buttons,
-  FirstToggle,
-  SecondToggle,
   AsideColumn,
 } from '../styles/pages/Home';
 
@@ -49,7 +48,7 @@ export default function Home({ user }: HomeProps) {
             <HamburgerMenu>
               <div />
             </HamburgerMenu>
-            <Mail href="mailto:mateus_vinicius15@outlook.com">
+            <Mail href={links.mail}>
               <OutlineMail />
             </Mail>
             <Main>
@@ -78,16 +77,14 @@ export default function Home({ user }: HomeProps) {
                     shareURL({
                       text: 'Find me on the web',
                       title: `Hello. I'm Mateus V. Farias.`,
-                      url: 'https://fariasmateuss.vercel.app/',
+                      url: links.website,
                     })
                   }
                 >
-                  <FirstToggle>Share</FirstToggle>
+                  Share
                 </button>
                 <button type="button">
-                  <Link href="/repositories">
-                    <SecondToggle>Know More</SecondToggle>
-                  </Link>
+                  <Link href="/repositories">Know More</Link>
                 </button>
               </Buttons>
             </div>
