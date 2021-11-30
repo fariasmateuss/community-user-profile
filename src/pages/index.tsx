@@ -2,8 +2,6 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 import { SocialMedia } from '../components/SocialMedia';
-import { links } from '../constants/links';
-import { USERNAME_KEY } from '../constants/params';
 import { shareURL } from '../utils/shareURL';
 import { api } from '../services/api';
 
@@ -26,6 +24,8 @@ type User = {
   name: string;
   login: string;
   bio: string;
+  email: string;
+  blog: string;
   location: string;
   public_repos: number;
   followers: number;
@@ -48,7 +48,7 @@ export default function Home({ user }: HomeProps) {
             <HamburgerMenu>
               <div />
             </HamburgerMenu>
-            <Mail href={links.mail}>
+            <Mail href={`mailto:${user.email}`}>
               <OutlineMail />
             </Mail>
             <Main>
@@ -77,7 +77,7 @@ export default function Home({ user }: HomeProps) {
                     shareURL({
                       text: 'Find me on the web',
                       title: `Hello. I'm Mateus V. Farias.`,
-                      url: links.website,
+                      url: user.blog,
                     })
                   }
                 >
@@ -111,7 +111,7 @@ export default function Home({ user }: HomeProps) {
 }
 
 export const getStaticProps = async () => {
-  const { data } = await api.get(`/users/${USERNAME_KEY}`);
+  const { data } = await api.get('/user');
 
   return {
     props: {

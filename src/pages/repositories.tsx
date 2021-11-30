@@ -2,7 +2,6 @@ import Head from 'next/head';
 
 import { Header } from '../components/Header';
 import { RepositoryBadges } from '../components/RepositoryBadges';
-import { USERNAME_KEY } from '../constants/params';
 import { api } from '../services/api';
 
 import {
@@ -78,7 +77,7 @@ export default function Repositories({ repositories }: RepositoriesProps) {
 }
 
 export const getStaticProps = async () => {
-  const { data } = await api.get(`/users/${USERNAME_KEY}/repos`);
+  const { data } = await api.get(`/user/repos`);
 
   return {
     props: {
