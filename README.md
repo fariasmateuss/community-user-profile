@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Profile page, but for developers.</strong>
+  Profile page, but for developers.
 </p>
 
 ## Screenshots
@@ -13,7 +13,7 @@
   <img src="docs/resources/repositories.png" width="45%" />
 </p>
 
-## Tech
+## Technology stack
 
 This project was developed using cutting edge front-end technologies.
 
@@ -21,30 +21,41 @@ This project was developed using cutting edge front-end technologies.
 
 - [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
 - [Next.js](https://nextjs.org/) - The Next.js is React Based framework with server side rendering capability.
+- [Styled Components](https://styled-components.com/) - CSS-in-JS library built for React.
+- [React Icons](https://react-icons.github.io/react-icons/) - SVG React icons of popular icon packs using ES6 imports.
+- [Using GitHub REST API](https://docs.github.com/en/rest).
 
 ## Run Locally
 
-Clone the project
+Clone the project:
 
 ```bash
 git clone https://github.com/fariasmateuss/community-user-profile.git
 ```
 
-Go to the project directory
+Go to the project directory:
 
 ```bash
 cd community-user-profile
 ```
 
-Install dependencies
-
-> To run this project in the development mode, you'll need to have a basic environment with NodeJs and Yarn installed.
+Install all dependencies:
 
 ```bash
 yarn
 ```
 
-Start the server
+Create a copy of the `.env.example` file called `.env.local`:
+
+```bash
+cp .env.example .env.local
+```
+
+Add your GitHub App's private key to the `.env.local` file.
+
+> P.S.: The token is used as the HTTP username.
+
+Start the server:
 
 ```bash
 yarn dev
@@ -58,21 +69,19 @@ yarn next
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deployment
+## Building the app
 
-To deploy this project run
+To prepare the build for production:
 
 ```bash
 yarn build
 ```
 
-## Usage
+And run it:
 
-In the `src/constants/params.ts` directory, you can change to your username:
-
-| key          | description                     | default         |
-| ------------ | ------------------------------- | --------------- |
-| USERNAME_KEY | Username used in [GitHub](https://docs.github.com/en/rest) REST Endpoints | `fariasmateuss` |
+```bash
+yarn start
+```
 
 ## Contributing
 
@@ -80,7 +89,7 @@ You can send how many PR's do you want, I'll be glad to analyse and accept them!
 
 Thank you!
 
-## Contact me 
+## Contact me
 
 Connect with me at [LinkedIn](https://www.linkedin.com/in/fariasmateuss/)
 
