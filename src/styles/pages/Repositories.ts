@@ -14,7 +14,7 @@ export const Wrapper = styled.section`
     transition: all 0.4s ease;
 
     &:hover {
-      border: 1px solid ${({ theme }) => theme.colors['dodger-blue']};
+      border: 1px solid ${({ theme }) => theme.colors[`dodger-blue`]};
       transform: translate3D(0, -1px, 0) scale(1.02);
     }
   }
@@ -31,7 +31,7 @@ export const TopSide = styled.div`
   > p {
     margin: 0.5rem 0 1rem;
     font-size: 0.8rem;
-    color: ${({ theme }) => theme.colors['shuttle-gray']};
+    color: ${({ theme }) => theme.colors[`shuttle-gray`]};
     letter-spacing: 0.1px;
   }
 
@@ -50,7 +50,7 @@ export const TopSide = styled.div`
 `;
 
 const IconCSS = css`
-  fill: ${({ theme }) => theme.colors['pale-sky']};
+  fill: ${({ theme }) => theme.colors[`pale-sky`]};
   flex-shrink: 0;
 `;
 
@@ -79,7 +79,7 @@ export const BottomSide = styled.div`
       p {
         margin-left: 0.3rem;
         font-size: 0.8rem;
-        color: ${({ theme }) => theme.colors['shuttle-gray']};
+        color: ${({ theme }) => theme.colors[`shuttle-gray`]};
       }
 
       .language {

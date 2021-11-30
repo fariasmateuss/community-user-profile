@@ -39,11 +39,11 @@ export const LinkToProfile = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors['spun-pearl']};
+  color: ${({ theme }) => theme.colors[`spun-pearl`]};
   transition: color 0.2s;
 
   &:hover {
-    color: ${({ theme }) => darken(0.2, theme.colors['spun-pearl'])};
+    color: ${({ theme }) => darken(0.2, theme.colors[`spun-pearl`])};
   }
 `;
 

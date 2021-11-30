@@ -27,7 +27,7 @@ export const CardCover = styled.div`
     background-image: linear-gradient(
       to top,
       ${({ theme }) => theme.colors.cyan},
-      ${({ theme }) => theme.colors['dodger-blue']}
+      ${({ theme }) => theme.colors[`dodger-blue`]}
     );
     clip-path: circle(400px at 50% -48.5%);
 
@@ -209,7 +209,7 @@ export const AboutColumn = styled.div`
   }
 
   p {
-    color: ${({ theme }) => theme.colors['dove-gray']};
+    color: ${({ theme }) => theme.colors[`dove-gray`]};
     font-weight: 300;
     line-height: 1.7;
   }
@@ -251,7 +251,7 @@ export const Buttons = styled.div`
       padding: 9.6px 0;
       background: linear-gradient(
         to right,
-        ${({ theme }) => theme.colors['dodger-blue']} 0%,
+        ${({ theme }) => theme.colors[`dodger-blue`]} 0%,
         ${({ theme }) => theme.colors.cyan} 140%
       );
       color: ${({ theme }) => theme.colors.white};
@@ -267,8 +267,8 @@ export const Buttons = styled.div`
 
     &:last-child {
       padding: 7.6px 0;
-      border: 2px solid ${({ theme }) => theme.colors['dodger-blue']};
-      color: ${({ theme }) => theme.colors['dodger-blue']};
+      border: 2px solid ${({ theme }) => theme.colors[`dodger-blue`]};
+      color: ${({ theme }) => theme.colors[`dodger-blue`]};
       border-radius: 18.1px;
       margin-left: 3px;
 
@@ -294,7 +294,7 @@ export const AsideColumn = styled.div`
     font-size: 2.1rem;
     font-weight: 200;
     line-height: 1.2;
-    color: ${({ theme }) => theme.colors['mine-shaft']};
+    color: ${({ theme }) => theme.colors[`mine-shaft`]};
   }
 
   h3 {
@@ -303,7 +303,7 @@ export const AsideColumn = styled.div`
     line-height: 1;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors['dove-gray']};
+    color: ${({ theme }) => theme.colors[`dove-gray`]};
   }
 
   @media screen and (max-width: 410px) {

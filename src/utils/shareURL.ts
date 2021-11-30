@@ -5,9 +5,9 @@ type ShareURLProps = {
 };
 
 export function shareURL({ text, title, url }: ShareURLProps) {
-  const trigger = document.querySelector('.share') as HTMLDivElement;
+  const trigger = document.querySelector(`.share`) as HTMLDivElement;
 
-  trigger.addEventListener('click', async () => {
+  trigger.addEventListener(`click`, async () => {
     try {
       await navigator.share({
         title,

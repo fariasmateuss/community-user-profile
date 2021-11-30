@@ -3,7 +3,7 @@ type RepositoryBadgesProps = {
 };
 
 export function RepositoryBadges({ language }: RepositoryBadgesProps) {
-  const languageClass = language ? language.toLowerCase() : 'other';
+  const languageClass = language ? language.toLowerCase() : `other`;
 
   return (
     <>

@@ -11,7 +11,7 @@ export default createGlobalStyle`
 body {
   -webkit-font-smoothing: antialiased;
    background: ${({ theme }) =>
-     theme.colors['athens-gray']} url('bg.svg') fixed no-repeat
+     theme.colors[`athens-gray`]} url('bg.svg') fixed no-repeat
     80% top;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;

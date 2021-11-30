@@ -17,7 +17,7 @@ export function Header({ returnToProfile, title }: HeaderProps) {
       <h1>{title}</h1>
 
       {returnToProfile && (
-        <Link href="/">
+        <Link href="/" passHref>
           <LinkToProfile>
             <ArrowLeft />
           </LinkToProfile>

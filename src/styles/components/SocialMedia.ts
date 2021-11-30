@@ -11,7 +11,7 @@ export const NavigationIcons = styled.nav`
     transition: 0.3s;
 
     &:hover {
-      color: ${({ theme }) => theme.colors['dodger-blue']};
+      color: ${({ theme }) => theme.colors[`dodger-blue`]};
     }
   }
 
