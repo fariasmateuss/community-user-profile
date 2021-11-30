@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 
 import { SocialMedia } from '../components/SocialMedia';
 import { shareURL } from '../utils/shareURL';
@@ -53,7 +54,7 @@ export default function Home({ user }: HomeProps) {
             </Mail>
             <Main>
               <div>
-                <img src={user.avatar_url} alt={user.name} />
+                <Image src={user.avatar_url} layout="fill" alt={user.name} />
               </div>
               <h2>{user.name}</h2>
               <h3>{user.location}</h3>
@@ -75,7 +76,7 @@ export default function Home({ user }: HomeProps) {
                   className="share"
                   onClick={() =>
                     shareURL({
-                      text: 'Find me on the web',
+                      text: `Find me on the web`,
                       title: `Hello. I'm Mateus V. Farias.`,
                       url: user.blog,
                     })
@@ -111,7 +112,7 @@ export default function Home({ user }: HomeProps) {
 }
 
 export const getStaticProps = async () => {
-  const { data } = await api.get('/user');
+  const { data } = await api.get(`/user`);
 
   return {
     props: {
