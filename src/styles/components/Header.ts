@@ -2,6 +2,8 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import { BsArrowLeft } from 'react-icons/bs';
 
+import { gradient } from '../theme/animations';
+
 export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
@@ -25,8 +27,10 @@ export const HeaderWrapper = styled.header`
       #b2f4b6 159.03%
     );
     background-clip: text;
+    background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: ${gradient} 10s ease infinite;
 
     @media screen and (max-width: 420px) {
       width: 260px;
