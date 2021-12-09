@@ -9,9 +9,12 @@
 ## Screenshots
 
 <p align="center">
-  <img src="docs/resources/card.png" width="45%" />
-  <img src="docs/resources/repositories.png" width="45%" />
+  <img src="docs/resources/profile.png" />
 </p>
+
+## Acknowledgment
+
+This interface was inspired by the design available on [Dribbble](https://dribbble.com/shots/3508584-Profile-Card-UI).
 
 ## Technology stack
 
@@ -23,7 +26,7 @@ This project was developed using cutting edge front-end technologies.
 - [Next.js](https://nextjs.org/) - The Next.js is React Based framework with server side rendering capability.
 - [Styled Components](https://styled-components.com/) - CSS-in-JS library built for React.
 - [React Icons](https://react-icons.github.io/react-icons/) - SVG React icons of popular icon packs using ES6 imports.
-- [Using GitHub REST API](https://docs.github.com/en/rest).
+- [GitHub REST API](https://docs.github.com/en/rest).
 
 ## Run Locally
 
@@ -85,9 +88,9 @@ yarn start
 
 ## Contributing
 
-You can send how many PR's do you want, I'll be glad to analyse and accept them! And if you have any question about the project...
+You can send how many PR's do you want, I'll be glad to analyse and accept them! And If you have any feedback [drop here](https://github.com/fariasmateuss/community-user-profile/discussions).
 
-Thank you!
+All PR's are welcome!
 
 ## Contact me
 
