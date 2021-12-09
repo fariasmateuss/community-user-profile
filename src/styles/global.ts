@@ -11,8 +11,7 @@ export default createGlobalStyle`
 body {
   -webkit-font-smoothing: antialiased;
    background: ${({ theme }) =>
-     theme.colors[`athens-gray`]} url('bg.svg') fixed no-repeat
-    80% top;
+     theme.colors[`athens-gray`]} url('bg.svg') fixed no-repeat 80% top;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }
@@ -58,5 +57,8 @@ a {
   --haskell: #29b544;
   --arduino: #bd79d1;
   --other: #9e9e9e;
-}
+
+  --toastify-color-progress-light:
+    linear-gradient(135deg, #9580ff 0,#80ffea 100%)
+  }
 `;

@@ -6,6 +6,9 @@ import { SocialMedia } from '../components/SocialMedia';
 import { shareURL } from '../utils/shareURL';
 import { api } from '../services/api';
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
   Wrapper,
   CardCover,
@@ -40,10 +43,13 @@ type HomeProps = {
 export default function Home({ user }: HomeProps) {
   return (
     <main>
+      <Head>
+        <title>Me on the Web.</title>
+      </Head>
+
       <Wrapper>
-        <Head>
-          <title>Me on the Web.</title>
-        </Head>
+        <ToastContainer position="top-right" autoClose={3000} />
+
         <CardCover>
           <CardStrip>
             <HamburgerMenu>
@@ -73,7 +79,6 @@ export default function Home({ user }: HomeProps) {
               <Buttons>
                 <button
                   type="button"
-                  className="share"
                   onClick={() =>
                     shareURL({
                       text: `Find me on the web`,
@@ -84,6 +89,7 @@ export default function Home({ user }: HomeProps) {
                 >
                   Share
                 </button>
+
                 <button type="button">
                   <Link href="/repositories">Know More</Link>
                 </button>
