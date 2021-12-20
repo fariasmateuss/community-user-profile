@@ -1,4 +1,4 @@
-name: Check PR
+name: CI
 
 on: [pull_request]
 
@@ -7,10 +7,15 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    name: Run Linters
+    name: Run CI
     runs-on: ubuntu-latest
 
     steps:
+      - name: First interaction
+        uses: actions/first-interaction@v1
+        with:
+          pr-message: 'The first PR in a project we never forget ❤️ Thanks for your contribution! 🚀'
+
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
@@ -24,5 +29,5 @@ jobs:
       - name: Install dependencies (with cache)
         uses: bahmutov/npm-install@HEAD
 
-      - name: Check linting
+      - name: Checking linting
         run: yarn lint
