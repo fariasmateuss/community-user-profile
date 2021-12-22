@@ -22,11 +22,18 @@ This project was developed using cutting edge front-end technologies.
 
 <img src="docs/resources/tech-logos.png" alt="Technologies used">
 
-- [TypeScript](https://github.com/microsoft/TypeScript) - TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
-- [Next.js](https://nextjs.org/) - The Next.js is React Based framework with server side rendering capability.
-- [Styled Components](https://styled-components.com/) - CSS-in-JS library built for React.
-- [React Icons](https://react-icons.github.io/react-icons/) - SVG React icons of popular icon packs using ES6 imports.
-- [GitHub REST API](https://docs.github.com/en/rest).
+- [TypeScript](https://github.com/microsoft/TypeScript) — TypeScript is a superset of JavaScript that compiles to clean JavaScript output.
+- [Next.js](https://nextjs.org/) — The Next.js is React Based framework with server side rendering capability.
+- [Styled Components](https://styled-components.com/) — CSS-in-JS library built for React.
+- [React Icons](https://react-icons.github.io/react-icons/) — SVG React icons of popular icon packs using ES6 imports.
+- [GitHub REST API](https://docs.github.com/en/rest) — GitHub REST API is used to fetch data from GitHub.
+
+## Pre-requisites
+
+Have the following pre-installed:
+
+- [Yarn](https://yarnpkg.com/) — Package manager, similar to [npm](https://www.npmjs.com/)
+- [Node](https://nodejs.org/en/)
 
 ## Run Locally
 
@@ -56,7 +63,7 @@ cp .env.example .env.local
 
 Add your GitHub App's private key to the `.env.local` file.
 
-> P.S.: The token is used as the HTTP username.
+> Note: The token is used as the HTTP username.
 
 Start the server:
 
@@ -88,16 +95,14 @@ yarn start
 
 ## Contributing
 
-You can send how many PR's do you want, I'll be glad to analyse and accept them! And If you have any feedback [drop here](https://github.com/fariasmateuss/community-user-profile/discussions).
-
-All PR's are welcome!
+You can send how many PR's do you want, I'll be glad to analyse and accept them! If you have any questions, suggestions or bug reports [drop here](https://github.com/fariasmateuss/community-user-profile/discussions).
 
 ## Contact me
 
-Connect with me at [LinkedIn](https://www.linkedin.com/in/fariasmateuss/)
+Connect with me at [LinkedIn](https://www.linkedin.com/in/fariasmateuss/).
 
 # License
 
-This project is under the [MIT License](/LICENSE)
+This project is under the [MIT License](/LICENSE).
 
-Made with ♥ by Mateus V. Farias
+Made with ♥ by Mateus V. Farias.
