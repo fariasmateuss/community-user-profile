@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { socialMedia } from '../model/accounts';
-import { NavigationIcons } from '../styles/components/SocialMedia';
+import { socialMedia } from '@model/accounts';
+import { NavigationIcons } from '@styles/components/SocialMedia';
 
 export type NavigationItemProps = {
   icon: JSX.Element;
