@@ -1,0 +1,41 @@
+{
+  "name": "Mateus V. Farias (@fariasmateuss) — Find me on web!",
+  "short_name": "@fariasmateuss",
+  "icons": [
+    {
+      "src": "/assets/favicon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/favicon-256x256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "/assets/favicon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "/assets/favicon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/assets/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32"
+    },
+    {
+      "src": "/assets/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": "16x16"
+    }
+  ],
+  "background_color": "#4facfe",
+  "description": "My name is Mateus V. Farias. I'm Software engineer based in Brazil.",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#4facfe"
+}
