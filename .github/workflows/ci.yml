@@ -14,6 +14,7 @@ jobs:
       - name: First interaction
         uses: actions/first-interaction@v1
         with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           pr-message: 'The first PR in a project we never forget ❤️ Thanks for your contribution! 🚀'
 
       - name: Checkout repository
