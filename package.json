@@ -1,6 +1,6 @@
 {
   "name": "community-user-profile",
-  "description": "Community User Profile",
+  "description": "My portifolio site build with Next.js — using the GitHub GraphQL API",
   "repository": {
     "type": "git",
     "url": "https://github.com/fariasmateuss/community-user-profile.git"
@@ -9,7 +9,7 @@
   "private": true,
   "author": {
     "email": "mateus_vinicius15@outlook.com",
-    "name": "Mateus V. Farias",
+    "name": "Mateus V. Farias (@fariasmateuss)",
     "url": "https://github.com/fariasmateuss/community-user-profile"
   },
   "license": "MIT",
