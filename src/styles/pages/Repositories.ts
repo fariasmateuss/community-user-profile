@@ -2,29 +2,35 @@ import styled, { css } from 'styled-components';
 import { RiBookMarkLine, RiStarLine } from 'react-icons/ri';
 import { AiOutlineFork } from 'react-icons/ai';
 
+type RepositoryProps = {
+  borderColor: string;
+};
+
+type LanguageBadgeProps = {
+  backgroundColor: string;
+};
+
 export const Wrapper = styled.section`
   display: grid;
   grid-gap: 20px;
   margin: 0px 20px 20px;
-
-  article {
-    background: ${({ theme }) => theme.colors.white};
-    border: 1px solid ${({ theme }) => theme.colors.gray};
-    border-radius: 6px;
-    transition: all 0.4s ease;
-
-    &:hover {
-      border: 1px solid ${({ theme }) => theme.colors[`dodger-blue`]};
-      transform: translate3D(0, -1px, 0) scale(1.02);
-    }
-  }
 `;
 
-export const LinkToRepository = styled.a`
+export const Repository = styled.article<RepositoryProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+
+  background: ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.gray};
+  border-radius: 6px;
+  transition: all 0.4s ease;
+
+  &:hover {
+    border: 1px solid ${({ borderColor }) => borderColor};
+    transform: translate3D(0, -1px, 0) scale(1.02);
+  }
 `;
 
 export const TopSide = styled.div`
@@ -81,109 +87,14 @@ export const BottomSide = styled.div`
         font-size: 0.8rem;
         color: ${({ theme }) => theme.colors[`shuttle-gray`]};
       }
-
-      .language {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        flex-shrink: 0;
-      }
-
-      .language.typescript {
-        background-color: var(--typescript);
-      }
-
-      .language.javascript {
-        background-color: var(--javascript);
-      }
-
-      .language.shell {
-        background-color: var(--shell);
-      }
-
-      .language.css {
-        background-color: var(--css);
-      }
-
-      .language.scss {
-        background-color: var(--scss);
-      }
-
-      .language.dart {
-        background-color: var(--dart);
-      }
-
-      .language.dockerfile {
-        background-color: var(--dockerfile);
-      }
-
-      .language.html {
-        background-color: var(--html);
-      }
-
-      .language.rust {
-        background-color: var(--rust);
-      }
-
-      .language.clojure {
-        background-color: var(--clojure);
-      }
-
-      .language.c {
-        background-color: var(--c);
-      }
-
-      .language.swift {
-        background-color: var(--swift);
-      }
-
-      .language.vue {
-        background-color: var(--vue);
-      }
-
-      .language.java {
-        background-color: var(--java);
-      }
-
-      .language.php {
-        background-color: var(--php);
-      }
-
-      .language.go {
-        background-color: var(--go);
-      }
-
-      .language.ruby {
-        background-color: var(--ruby);
-      }
-
-      .language.objective-c {
-        background-color: var(--objective-c);
-      }
-
-      .language.kotlin {
-        background-color: var(--kotlin);
-      }
-
-      .language.elixir {
-        background-color: var(--elixir);
-      }
-
-      .language.python {
-        background-color: var(--python);
-      }
-
-      .language.haskell {
-        background-color: var(--haskell);
-      }
-
-      .language.arduino {
-        background-color: var(--arduino);
-      }
-
-      .language.other {
-        background-color: var(--other);
-      }
     }
   }
+`;
+
+export const LanguageBadge = styled.span<LanguageBadgeProps>`
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: ${({ backgroundColor }) => backgroundColor};
 `;
