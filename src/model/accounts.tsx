@@ -9,8 +9,8 @@ import {
 import { SiDevDotTo } from 'react-icons/si';
 import { RiTwitchFill } from 'react-icons/ri';
 
-import { NavigationItemProps } from '../components/SocialMedia';
-import { links } from '../constants/links';
+import { NavigationItemProps } from '@components/SocialMedia';
+import { links } from '@constants/links';
 
 type NavigationItems = NavigationItemProps[];
 

@@ -4,7 +4,7 @@ import {
   ArrowLeft,
   HeaderWrapper,
   LinkToProfile,
-} from '../styles/components/Header';
+} from '@styles/components/Header';
 
 type HeaderProps = {
   returnToProfile: boolean;

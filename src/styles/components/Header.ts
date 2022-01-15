@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import { BsArrowLeft } from 'react-icons/bs';
 
-import { gradient } from '../theme/animations';
+import { gradient } from '@styles/theme/animations';
 
 export const HeaderWrapper = styled.header`
   display: flex;

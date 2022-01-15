@@ -2,9 +2,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import { SocialMedia } from '../components/SocialMedia';
-import { shareURL } from '../utils/shareURL';
-import { api } from '../services/api';
+import { SocialMedia } from '@components/SocialMedia';
+import { shareURL } from '@utils/shareURL';
+import { api } from '@services/api';
 
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
