@@ -3,7 +3,7 @@ import { RiBookMarkLine, RiStarLine } from 'react-icons/ri';
 import { AiOutlineFork } from 'react-icons/ai';
 
 type RepositoryProps = {
-  borderColor: string;
+  borderColor?: string;
 };
 
 type LanguageBadgeProps = {
