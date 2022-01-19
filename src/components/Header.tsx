@@ -1,28 +1,25 @@
-import Link from 'next/link';
+import { ReactNode } from 'react';
 
-import {
-  ArrowLeft,
-  HeaderWrapper,
-  LinkToProfile,
-} from '@styles/components/Header';
+import { BackButton } from './BackButton';
+
+import { Wrapper, Container, Title } from '@styles/components/Header';
 
 type HeaderProps = {
-  returnToProfile: boolean;
+  backToHomePage?: boolean;
   title: string;
+  children?: ReactNode;
 };
 
-export function Header({ returnToProfile, title }: HeaderProps) {
+export function Header({ backToHomePage, title, children }: HeaderProps) {
   return (
-    <HeaderWrapper>
-      <h1>{title}</h1>
+    <Wrapper>
+      <Container>
+        <Title>{title}</Title>
 
-      {returnToProfile && (
-        <Link href="/" passHref>
-          <LinkToProfile>
-            <ArrowLeft />
-          </LinkToProfile>
-        </Link>
-      )}
-    </HeaderWrapper>
+        {backToHomePage && <BackButton href="/" />}
+      </Container>
+
+      {children}
+    </Wrapper>
   );
 }
