@@ -22,7 +22,7 @@ export default function KnowMore({ pinnableItems }: Repositories) {
         <title>Work. Hobby. Open Source.</title>
       </Head>
 
-      <Header title="Open source projects" returnToProfile />
+      <Header title="Open source projects" backToHomePage />
 
       <Wrapper>
         {pinnableItems.nodes.map(pinnableItems => (
