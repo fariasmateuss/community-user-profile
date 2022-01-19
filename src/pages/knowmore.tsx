@@ -1,7 +1,6 @@
 import Head from 'next/head';
 
 import { Header } from '@components/Header';
-import { getLanguageColor } from '@utils/getLanguageColor';
 import { getRepositories } from '@graphql/queries/getRepositories';
 import { Repositories } from '@graphql/schemas';
 
@@ -29,7 +28,7 @@ export default function KnowMore({ pinnableItems }: Repositories) {
         {pinnableItems.nodes.map(pinnableItems => (
           <Content
             key={pinnableItems.id}
-            borderColor={getLanguageColor(pinnableItems.primaryLanguage.name)}
+            borderColor={pinnableItems.primaryLanguage.color}
           >
             <TopSide>
               <header>
@@ -49,9 +48,7 @@ export default function KnowMore({ pinnableItems }: Repositories) {
               <ul>
                 <li>
                   <LanguageBadge
-                    backgroundColor={getLanguageColor(
-                      pinnableItems.primaryLanguage.name,
-                    )}
+                    backgroundColor={pinnableItems.primaryLanguage.color}
                   />
                   <p>{pinnableItems.primaryLanguage.name}</p>
                 </li>
