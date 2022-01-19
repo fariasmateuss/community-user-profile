@@ -17,3 +17,22 @@ export type User = {
     };
   };
 };
+
+export type Repositories = {
+  pinnableItems: {
+    nodes: Repository[];
+  };
+};
+
+export type Repository = {
+  id: string;
+  description: string;
+  name: string;
+  primaryLanguage: {
+    name: string;
+    color: string;
+  };
+  url: string;
+  stargazerCount: number;
+  forkCount: number;
+};
