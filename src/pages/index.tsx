@@ -75,7 +75,7 @@ export default function Home({ user }: User) {
                 </button>
 
                 <button type="button">
-                  <Link href="/repositories">Know More</Link>
+                  <Link href="/knowmore">Know More</Link>
                 </button>
               </Buttons>
             </div>

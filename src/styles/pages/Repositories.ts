@@ -16,7 +16,7 @@ export const Wrapper = styled.section`
   margin: 0px 20px 20px;
 `;
 
-export const Repository = styled.article<RepositoryProps>`
+export const Content = styled.article<RepositoryProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,12 +45,13 @@ export const TopSide = styled.div`
     display: flex;
     align-items: center;
 
-    > p {
+    > a {
       margin-left: 0.5rem;
       font-size: 0.9rem;
       font-weight: 600;
       color: ${({ theme }) => theme.colors.link};
       text-decoration: none;
+      cursor: pointer;
     }
   }
 `;
