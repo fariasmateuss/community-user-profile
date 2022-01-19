@@ -7,7 +7,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    name: Run CI
+    name: Check PR
     runs-on: ubuntu-latest
 
     steps:
@@ -30,5 +30,11 @@ jobs:
       - name: Install dependencies (with cache)
         uses: bahmutov/npm-install@HEAD
 
-      - name: Checking linting
+      - name: Check lint
         run: yarn lint
+
+      - name: Check format
+        run: yarn format
+
+      - name: Build
+        run: yarn build
