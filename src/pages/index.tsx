@@ -10,19 +10,7 @@ import { shareURL } from '@utils/shareURL';
 import { getUser } from '@graphql/queries/getUser';
 import { User } from '@graphql/schemas';
 
-import {
-  Wrapper,
-  CardCover,
-  CardStrip,
-  HamburgerMenu,
-  Mail,
-  OutlineMail,
-  Main,
-  CardBody,
-  AboutColumn,
-  Buttons,
-  AsideColumn,
-} from '../styles/pages/Home';
+import * as S from '../styles/pages/Home';
 
 export default function Home({ user }: User) {
   return (
@@ -31,38 +19,39 @@ export default function Home({ user }: User) {
         <title>Me on the Web.</title>
       </Head>
 
-      <Wrapper>
+      <S.Wrapper>
         <ToastContainer position="top-right" autoClose={3000} />
 
-        <CardCover>
-          <CardStrip>
-            <HamburgerMenu>
-              <div />
-            </HamburgerMenu>
-            <Mail href={`mailto:${user.email}`}>
-              <OutlineMail />
-            </Mail>
-            <Main>
-              <div>
+        <S.Card>
+          <S.Header>
+            <S.HamburgerMenu>
+              <S.Center />
+            </S.HamburgerMenu>
+            <S.Mail href={`mailto:${user.email}`}>
+              <S.OutlineMail />
+            </S.Mail>
+            <S.Main>
+              <S.Circle>
                 <Image src={user.avatarUrl} layout="fill" alt={user.name} />
-              </div>
-              <h2>{user.name}</h2>
-              <h3>{user.location}</h3>
-            </Main>
-          </CardStrip>
+              </S.Circle>
+              <S.Name>{user.name}</S.Name>
+              <S.SubName>{user.location}</S.SubName>
+            </S.Main>
+          </S.Header>
 
-          <CardBody>
+          <S.Content>
             <div>
-              <AboutColumn>
-                <h3>About</h3>
-                <p>{user.bio}</p>
-              </AboutColumn>
+              <div>
+                <h3 className="about-title">About</h3>
+                <p className="about-description">{user.bio}</p>
+              </div>
 
               <SocialMedia />
 
-              <Buttons>
+              <S.ButtonsWrap>
                 <button
                   type="button"
+                  className="button button__primary"
                   onClick={() =>
                     shareURL({
                       text: `Find me on the web`,
@@ -74,29 +63,29 @@ export default function Home({ user }: User) {
                   Share
                 </button>
 
-                <button type="button">
+                <button type="button" className="button button__secondary">
                   <Link href="/knowmore">Know More</Link>
                 </button>
-              </Buttons>
+              </S.ButtonsWrap>
             </div>
 
-            <AsideColumn>
+            <S.Right>
               <div>
-                <h2>{user.repositories.totalCount}</h2>
-                <h3>Repositories</h3>
+                <h2 className="number">{user.repositories.totalCount}</h2>
+                <h3 className="number-title">Repositories</h3>
               </div>
               <div>
-                <h2>{user.following.totalCount}</h2>
-                <h3>Following</h3>
+                <h2 className="number">{user.following.totalCount}</h2>
+                <h3 className="number-title">Following</h3>
               </div>
               <div>
-                <h2>{user.followers.totalCount}</h2>
-                <h3>Followers</h3>
+                <h2 className="number">{user.followers.totalCount}</h2>
+                <h3 className="number-title">Followers</h3>
               </div>
-            </AsideColumn>
-          </CardBody>
-        </CardCover>
-      </Wrapper>
+            </S.Right>
+          </S.Content>
+        </S.Card>
+      </S.Wrapper>
     </main>
   );
 }

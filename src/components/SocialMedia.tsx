@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { socialMedia } from '@model/accounts';
-import { NavigationIcons } from '@styles/components/SocialMedia';
+
+import * as S from '@styles/components/SocialMedia';
 
 export type NavigationItemProps = {
   icon: JSX.Element;
@@ -10,17 +11,17 @@ export type NavigationItemProps = {
 
 export function SocialMedia() {
   return (
-    <NavigationIcons>
+    <S.IconsContainer>
       {socialMedia.map(({ icon, url }: NavigationItemProps, index) => (
-        <a
+        <S.Icon
           key={String(index)}
           href={url}
           target="_blank"
           rel="noopener noreferrer"
         >
           {icon}
-        </a>
+        </S.Icon>
       ))}
-    </NavigationIcons>
+    </S.IconsContainer>
   );
 }

@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 
 import { BackButton } from './BackButton';
 
-import { Wrapper, Container, Title } from '@styles/components/Header';
+import * as S from '@styles/components/Header';
 
 type HeaderProps = {
   backToHomePage?: boolean;
@@ -12,14 +12,14 @@ type HeaderProps = {
 
 export function Header({ backToHomePage, title, children }: HeaderProps) {
   return (
-    <Wrapper>
-      <Container>
-        <Title>{title}</Title>
+    <S.Wrapper>
+      <S.Container>
+        <S.Title>{title}</S.Title>
 
         {backToHomePage && <BackButton href="/" />}
-      </Container>
+      </S.Container>
 
       {children}
-    </Wrapper>
+    </S.Wrapper>
   );
 }
