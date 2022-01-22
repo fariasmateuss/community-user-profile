@@ -4,16 +4,7 @@ import { Header } from '@components/Header';
 import { getRepositories } from '@graphql/queries/getRepositories';
 import { Repositories } from '@graphql/schemas';
 
-import {
-  Wrapper,
-  Content,
-  TopSide,
-  BookMarkLine,
-  StarLine,
-  OutlineFork,
-  BottomSide,
-  LanguageBadge,
-} from '../styles/pages/Repositories';
+import * as S from '@styles/pages/Knowmore';
 
 export default function KnowMore({ pinnableItems }: Repositories) {
   return (
@@ -24,47 +15,47 @@ export default function KnowMore({ pinnableItems }: Repositories) {
 
       <Header title="Open source projects" backToHomePage />
 
-      <Wrapper>
+      <S.Wrapper>
         {pinnableItems.nodes.map(pinnableItems => (
-          <Content
+          <S.Container
             key={pinnableItems.id}
             borderColor={pinnableItems.primaryLanguage.color}
           >
-            <TopSide>
-              <header>
-                <BookMarkLine />
-                <a
+            <div>
+              <S.TopSide>
+                <S.Repo />
+                <S.Name
                   href={pinnableItems.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {pinnableItems.name}
-                </a>
-              </header>
+                </S.Name>
+              </S.TopSide>
 
-              <p>{pinnableItems.description}</p>
-            </TopSide>
-            <BottomSide>
-              <ul>
-                <li>
-                  <LanguageBadge
+              <S.Description>{pinnableItems.description}</S.Description>
+            </div>
+            <div>
+              <S.ItemGroup>
+                <S.Item>
+                  <S.Circle
                     backgroundColor={pinnableItems.primaryLanguage.color}
                   />
-                  <p>{pinnableItems.primaryLanguage.name}</p>
-                </li>
-                <li>
-                  <StarLine />
-                  <p>{pinnableItems.stargazerCount}</p>
-                </li>
-                <li>
-                  <OutlineFork />
-                  <p>{pinnableItems.forkCount}</p>
-                </li>
-              </ul>
-            </BottomSide>
-          </Content>
+                  <S.Label>{pinnableItems.primaryLanguage.name}</S.Label>
+                </S.Item>
+                <S.Item>
+                  <S.Stargazer />
+                  <S.Label>{pinnableItems.stargazerCount}</S.Label>
+                </S.Item>
+                <S.Item>
+                  <S.Fork />
+                  <S.Label>{pinnableItems.forkCount}</S.Label>
+                </S.Item>
+              </S.ItemGroup>
+            </div>
+          </S.Container>
         ))}
-      </Wrapper>
+      </S.Wrapper>
     </main>
   );
 }

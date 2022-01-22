@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { Wrapper, ArrowLeftIcon } from '@styles/components/BackButton';
+import * as S from '@styles/components/BackButton';
 
 type BackButtonProps = {
   href: string;
@@ -9,9 +9,9 @@ type BackButtonProps = {
 export function BackButton({ href }: BackButtonProps) {
   return (
     <Link href={href} passHref>
-      <Wrapper>
-        <ArrowLeftIcon />
-      </Wrapper>
+      <S.IconContainer>
+        <S.IconArrowLeft />
+      </S.IconContainer>
     </Link>
   );
 }

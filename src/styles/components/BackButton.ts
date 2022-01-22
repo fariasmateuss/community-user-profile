@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 import { BsArrowLeft } from 'react-icons/bs';
 
-export const Wrapper = styled.a`
+export const IconContainer = styled.a`
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -14,7 +14,7 @@ export const Wrapper = styled.a`
   }
 `;
 
-export const ArrowLeftIcon = styled(BsArrowLeft)`
+export const IconArrowLeft = styled(BsArrowLeft)`
   width: 30px;
   height: auto;
   color: ${({ theme }) => theme.colors[`spun-pearl`]};

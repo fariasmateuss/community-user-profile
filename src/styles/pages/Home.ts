@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   min-height: 100vh;
 `;
 
-export const CardCover = styled.div`
+export const Card = styled.div`
   position: relative;
   width: 400px;
   background-color: ${({ theme }) => theme.colors.white};
@@ -38,7 +38,7 @@ export const CardCover = styled.div`
   }
 `;
 
-export const CardStrip = styled.div`
+export const Header = styled.div`
   position: relative;
   height: 265px;
 
@@ -87,16 +87,16 @@ export const HamburgerMenu = styled.span`
     bottom: 0;
     ${contentCSS}
   }
+`;
 
-  div {
-    position: absolute;
-    height: 2px;
-    width: 70%;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: ${({ theme }) => theme.colors.white};
-    border-radius: 1px;
-  }
+export const Center = styled.div`
+  position: absolute;
+  height: 2px;
+  width: 70%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: ${({ theme }) => theme.colors.white};
+  border-radius: 1px;
 `;
 
 export const Mail = styled.a`
@@ -129,52 +129,53 @@ export const Main = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
 
-  div {
-    position: relative;
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    border: 4px solid ${({ theme }) => theme.colors.aqua};
-    margin-bottom: 2px;
-    overflow: hidden;
-
-    @media screen and (max-width: 370px) {
-      width: 90px;
-      height: 90px;
-      border-width: 3px;
-    }
-
-    img {
-      height: auto;
-      max-width: 100%;
-    }
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1;
-    margin: 5px 0;
-    color: ${({ theme }) => theme.colors.white};
-  }
-
-  h3 {
-    font-family: 'Cutive Mono', monospace;
-    font-size: 1.2rem;
-    opacity: 0.8;
-    color: ${({ theme }) => theme.colors.white};
-  }
+export const Circle = styled.div`
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid ${({ theme }) => theme.colors.aqua};
+  margin-bottom: 2px;
+  overflow: hidden;
 
   @media screen and (max-width: 370px) {
-    h3,
-    h2 {
-      font-size: 1rem;
-    }
+    width: 90px;
+    height: 90px;
+    border-width: 3px;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
   }
 `;
 
-export const CardBody = styled.div`
+export const Name = styled.h2`
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1;
+  margin: 5px 0;
+  color: ${({ theme }) => theme.colors.white};
+
+  @media screen and (max-width: 370px) {
+    font-size: 1rem;
+  }
+`;
+
+export const SubName = styled.h3`
+  font-family: 'Cutive Mono', monospace;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  color: ${({ theme }) => theme.colors.white};
+
+  @media screen and (max-width: 370px) {
+    font-size: 1rem;
+  }
+`;
+
+export const Content = styled.div`
   display: flex;
   padding: 1.7rem 2.5rem 2.6rem 2.5rem;
 
@@ -185,10 +186,8 @@ export const CardBody = styled.div`
   @media screen and (max-width: 370px) {
     padding: 1.2rem 1.8rem 1.8rem 1.8rem;
   }
-`;
 
-export const AboutColumn = styled.div`
-  h3 {
+  .about-title {
     position: relative;
     color: ${({ theme }) => theme.colors.emperor};
     font-weight: 500;
@@ -208,29 +207,29 @@ export const AboutColumn = styled.div`
     }
   }
 
-  p {
+  .about-description {
     color: ${({ theme }) => theme.colors[`dove-gray`]};
     font-weight: 300;
     line-height: 1.7;
   }
 
   @media screen and (max-width: 370px) {
-    h3 {
+    .about-title {
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
     }
 
-    p {
+    .about-description {
       font-size: 0.8rem;
     }
   }
 `;
 
-export const Buttons = styled.div`
+export const ButtonsWrap = styled.div`
   display: flex;
   margin-top: 5px;
 
-  button {
+  .button {
     flex: 4;
     display: flex;
     justify-content: center;
@@ -247,7 +246,7 @@ export const Buttons = styled.div`
       flex: 5;
     }
 
-    &:first-child {
+    &__primary {
       padding: 9.6px 0;
       background: linear-gradient(
         to right,
@@ -265,7 +264,7 @@ export const Buttons = styled.div`
       }
     }
 
-    &:last-child {
+    &__secondary {
       padding: 7.6px 0;
       border: 2px solid ${({ theme }) => theme.colors[`dodger-blue`]};
       color: ${({ theme }) => theme.colors[`dodger-blue`]};
@@ -281,7 +280,7 @@ export const Buttons = styled.div`
   }
 `;
 
-export const AsideColumn = styled.div`
+export const Right = styled.div`
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -290,14 +289,14 @@ export const AsideColumn = styled.div`
   padding-top: 1.5rem;
   margin-left: 1.6rem;
 
-  h2 {
+  .number {
     font-size: 2.1rem;
     font-weight: 200;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors[`mine-shaft`]};
   }
 
-  h3 {
+  .number-title {
     font-size: 0.55rem;
     font-weight: 400;
     line-height: 1;
@@ -317,11 +316,11 @@ export const AsideColumn = styled.div`
   @media screen and (max-width: 370px) {
     padding-top: 1rem;
 
-    h2 {
+    .number {
       font-size: 1.8rem;
     }
 
-    h3 {
+    .number-title {
       font-size: 0.4rem;
     }
   }
