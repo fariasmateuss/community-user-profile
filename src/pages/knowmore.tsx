@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import { Header } from '@components/Header';
+import { Footer } from '@components/Footer';
 import { getRepositories } from '@graphql/queries/getRepositories';
 import { Repositories } from '@graphql/schemas';
 
@@ -12,9 +13,7 @@ export default function KnowMore({ pinnableItems }: Repositories) {
       <Head>
         <title>Work. Hobby. Open Source.</title>
       </Head>
-
       <Header title="Open source projects" backToHomePage />
-
       <S.Wrapper>
         {pinnableItems.nodes.map(pinnableItems => (
           <S.Container
@@ -56,6 +55,8 @@ export default function KnowMore({ pinnableItems }: Repositories) {
           </S.Container>
         ))}
       </S.Wrapper>
+
+      <Footer />
     </main>
   );
 }

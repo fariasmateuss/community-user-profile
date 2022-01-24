@@ -12,8 +12,13 @@ type currentIconColorProps = {
 
 export const Wrapper = styled.section`
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin: 0 20px 20px;
+
+  @media (max-width: 524px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Container = styled.article<RepositoryProps>`
@@ -45,6 +50,11 @@ export const Name = styled.a`
   color: ${({ theme }) => theme.colors.link};
   text-decoration: none;
   cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    outline-width: 0;
+  }
 `;
 
 export const Description = styled.p`
