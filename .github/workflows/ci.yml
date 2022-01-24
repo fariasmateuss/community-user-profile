@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on: [pull_request]
 
@@ -7,16 +7,10 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    name: Check PR
+    name: Run Linters & Build
     runs-on: ubuntu-latest
 
     steps:
-      - name: First interaction
-        uses: actions/first-interaction@v1
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          pr-message: 'The first PR in a project we never forget ❤️ Thanks for your contribution! 🚀'
-
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
@@ -27,26 +21,14 @@ jobs:
         with:
           node-version: 14
 
-      - name: Use Yarn cache
-      - uses: actions/cache@v2
-        id: yarn-cache
-        with:
-          path: |
-            ~/cache
-            !~/cache/exclude
-            **/node_modules
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn-
+      - name: Install dependencies (with cache)
+        uses: bahmutov/npm-install@v1
 
-      - name: Create .env
-        run: echo '${{ secrets.envtesting }}' > .env
+      - name: Check types
+        run: yarn type-check
 
       - name: Check lint
         run: yarn lint
 
-      - name: Check format
+      - name: Check code style
         run: yarn format
-
-      - name: Build
-        run: yarn build
