@@ -14,4 +14,6 @@ export const colors = {
   'shuttle-gray': `#586069`,
   'pale-sky': `#6a737d`,
   'spun-pearl': `#a8a8b3`,
+  'light-gray': `rgb(115, 115, 128)`,
+  'light-gray-2': `rgb(61, 61, 77)`,
 };
