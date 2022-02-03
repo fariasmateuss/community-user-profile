@@ -44,8 +44,19 @@ export default class MyDocument extends Document {
           <meta name="application-name" content="&nbsp;" />
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans&family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+
+          <link
+            href="http://fonts.cdnfonts.com/css/alliance-no1?styles=28463,28464"
             rel="stylesheet"
           />
 
