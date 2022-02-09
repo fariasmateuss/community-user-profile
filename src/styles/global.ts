@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
+import 'react-toastify/dist/ReactToastify.css';
+
 export default createGlobalStyle`
 * {
   margin: 0;
@@ -11,14 +13,16 @@ export default createGlobalStyle`
 body {
   -webkit-font-smoothing: antialiased;
    background: ${({ theme }) =>
-     theme.colors[`athens-gray`]} url('bg.svg') fixed no-repeat 80% top;
+     theme.colors[
+       `athens-gray`
+     ]} url('/logos/github.svg') fixed no-repeat 80% top;
   font-family: 'Poppins', sans-serif;
   font-size: 1rem;
 }
 
-button, a {
-  cursor: pointer;
+button {
   all: unset;
+  cursor: pointer;
 }
 
 a {
@@ -26,11 +30,15 @@ a {
   color: currentColor;
 }
 
-#__next {
-  max-width: 960px;
-  width: 100%;
-  margin: 0px auto;
-}
+.next-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &---contained {
+      object-fit: contain;
+    }
+  }
 
 :root {
   --toastify-color-progress-light:

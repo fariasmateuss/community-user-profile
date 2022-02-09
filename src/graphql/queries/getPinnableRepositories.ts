@@ -1,9 +1,9 @@
 import { gql } from 'graphql-request';
 
 import { client } from '@config/graphQLClient';
-import { Repositories } from '@graphql/schemas';
+import { PinnableRepositories } from '@graphql/schemas';
 
-export const GET_REPOSITORIES = gql`
+export const GET_PINNABLE_REPOSITORIES = gql`
   query getRepositories {
     viewer {
       pinnableItems(first: 6) {
@@ -26,8 +26,8 @@ export const GET_REPOSITORIES = gql`
   }
 `;
 
-export async function getRepositories() {
-  const { viewer } = await client.request(GET_REPOSITORIES);
+export async function getPinnableRepositories() {
+  const { viewer } = await client.request(GET_PINNABLE_REPOSITORIES);
 
-  return viewer as Repositories;
+  return viewer as PinnableRepositories;
 }

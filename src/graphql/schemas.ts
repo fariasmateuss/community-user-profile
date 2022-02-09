@@ -1,26 +1,18 @@
 export type User = {
-  user: {
-    bio: string;
-    email: string;
-    location: string;
-    name: string;
-    avatarUrl: string;
-    websiteUrl: string;
-    repositories: {
-      totalCount: number;
-    };
-    followers: {
-      totalCount: number;
-    };
-    following: {
-      totalCount: number;
-    };
+  bio: string;
+  email: string;
+  location: string;
+  name: string;
+  avatarUrl: string;
+  websiteUrl: string;
+  repositories: {
+    totalCount: number;
   };
-};
-
-export type Repositories = {
-  pinnableItems: {
-    nodes: Repository[];
+  followers: {
+    totalCount: number;
+  };
+  following: {
+    totalCount: number;
   };
 };
 
@@ -35,4 +27,10 @@ export type Repository = {
   url: string;
   stargazerCount: number;
   forkCount: number;
+};
+
+export type PinnableRepositories = {
+  pinnableItems: {
+    nodes: Repository[];
+  };
 };

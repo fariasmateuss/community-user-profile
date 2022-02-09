@@ -13,8 +13,8 @@ type currentIconColorProps = {
 export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 0 20px 20px;
+  gap: 1.25rem;
+  margin: 0 1.25rem 1.25rem;
 
   @media (max-width: 524px) {
     grid-template-columns: 1fr;

@@ -3,7 +3,7 @@ import { Repository } from '@graphql/schemas';
 import * as S from '@styles/components/Repositories';
 
 type RepositoriesProps = {
-  repositories: Repository[] | undefined;
+  repositories?: Repository[];
 };
 
 export function Repositories({ repositories }: RepositoriesProps) {

@@ -1,73 +1,62 @@
+import { InferGetStaticPropsType } from 'next';
+import { format } from 'date-fns';
+
 import Head from 'next/head';
 
-import { Header } from '@components/Header';
+import { Heading } from '@components/Heading';
 import { Footer } from '@components/Footer';
-import { getRepositories } from '@graphql/queries/getRepositories';
-import { Repositories } from '@graphql/schemas';
+import { Posts } from '@components/Posts';
+import { BackButton } from '@components/BackButton';
+import { Repositories } from '@components/Repositories';
 
-import * as S from '@styles/pages/Knowmore';
+import { Post } from '@shared/types';
+import { api } from '@services/api';
+import { getPinnableRepositories } from '@graphql/queries/getPinnableRepositories';
 
-export default function KnowMore({ pinnableItems }: Repositories) {
+import * as S from '@styles/pages/KnowMore';
+
+export default function KnowMore({
+  pinnableRepositories,
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main>
+    <>
       <Head>
         <title>Work. Hobby. Open Source.</title>
       </Head>
-      <Header title="Open source projects" backToHomePage />
+
       <S.Wrapper>
-        {pinnableItems.nodes.map(pinnableItems => (
-          <S.Container
-            key={pinnableItems.id}
-            borderColor={pinnableItems.primaryLanguage.color}
-          >
-            <div>
-              <S.TopSide>
-                <S.Repo />
-                <S.Name
-                  href={pinnableItems.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {pinnableItems.name}
-                </S.Name>
-              </S.TopSide>
+        <Heading title="Featured Projects">
+          <BackButton href="/" />
+        </Heading>
+        <Repositories repositories={pinnableRepositories} />
 
-              <S.Description>{pinnableItems.description}</S.Description>
-            </div>
-            <div>
-              <S.ItemGroup>
-                <S.Item>
-                  <S.Circle
-                    backgroundColor={pinnableItems.primaryLanguage.color}
-                  />
-                  <S.Label>{pinnableItems.primaryLanguage.name}</S.Label>
-                </S.Item>
-                <S.Item>
-                  <S.Stargazer />
-                  <S.Label>{pinnableItems.stargazerCount}</S.Label>
-                </S.Item>
-                <S.Item>
-                  <S.Fork />
-                  <S.Label>{pinnableItems.forkCount}</S.Label>
-                </S.Item>
-              </S.ItemGroup>
-            </div>
-          </S.Container>
-        ))}
+        <Heading title="Latest From the Blog" />
+        <Posts posts={posts} />
+
+        <Footer />
       </S.Wrapper>
-
-      <Footer />
-    </main>
+    </>
   );
 }
 
 export const getStaticProps = async () => {
   try {
-    const { pinnableItems } = await getRepositories();
+    const { data } = await api.get(`articles/me`);
+    const posts = data.map((post: Post) => {
+      return {
+        ...post,
+        published_at: format(new Date(post.published_at), `MMMM dd, yyyy`),
+      };
+    });
+
+    const { pinnableItems } = await getPinnableRepositories();
+    const pinnableRepositories = pinnableItems.nodes.map(node => node);
 
     return {
       props: {
-        pinnableItems,
+        posts,
+        pinnableRepositories,
       },
 
       revalidate: 60 * 60 * 24,
