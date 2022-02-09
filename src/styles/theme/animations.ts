@@ -1,6 +1,7 @@
 import { keyframes } from 'styled-components';
 
-export const gradient = keyframes`
+export const animations = {
+  easeInfinite: keyframes`
   0% {
     background-position: 0 50%;
   }
@@ -10,4 +11,5 @@ export const gradient = keyframes`
   to {
     background-position: 0 50%;
   }
-`;
+`,
+};

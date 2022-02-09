@@ -13,15 +13,15 @@ type currentIconColorProps = {
 export const Wrapper = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin: 0 20px 20px;
+  gap: 1.25rem;
+  margin: 0 1.25rem 1.25rem;
 
   @media (max-width: 524px) {
     grid-template-columns: 1fr;
   }
 `;
 
-export const Container = styled.article<RepositoryProps>`
+export const RepositoryContainer = styled.article<RepositoryProps>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,7 +43,7 @@ export const TopSide = styled.header`
   align-items: center;
 `;
 
-export const Name = styled.a`
+export const RepositoryLink = styled.a`
   margin-left: 0.5rem;
   font-size: 0.9rem;
   font-weight: 600;
@@ -69,30 +69,30 @@ const IconCSS = css`
   flex-shrink: 0;
 `;
 
-export const Repo = styled(RiBookMarkLine)`
+export const RepositoryIcon = styled(RiBookMarkLine)`
   ${IconCSS}
 `;
 
-export const Stargazer = styled(RiStarLine)`
+export const StargazerIcon = styled(RiStarLine)`
   ${IconCSS}
 `;
 
-export const Fork = styled(AiOutlineFork)`
+export const ForkIcon = styled(AiOutlineFork)`
   ${IconCSS}
 `;
 
-export const ItemGroup = styled.ul`
+export const BottomSide = styled.ul`
   display: flex;
   align-items: center;
 `;
 
-export const Item = styled.li`
+export const ItemGroup = styled.li`
   display: flex;
   align-items: center;
   margin-right: 1rem;
 `;
 
-export const Label = styled.p`
+export const ItemTitle = styled.p`
   margin-left: 0.3rem;
   font-size: 0.8rem;
   color: ${({ theme }) => theme.colors[`shuttle-gray`]};

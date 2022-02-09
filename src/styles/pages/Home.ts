@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { HiOutlineMail } from 'react-icons/hi';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.main`
   padding: 20px;
   display: flex;
   justify-content: center;

@@ -45,7 +45,7 @@ export default class MyDocument extends Document {
           <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
 
           <link
-            href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
 

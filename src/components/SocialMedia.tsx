@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { socialMedia } from '@model/accounts';
 
 import * as S from '@styles/components/SocialMedia';

@@ -26,7 +26,8 @@ This project was developed using cutting edge front-end technologies.
 - [Next.js](https://nextjs.org/) — The Next.js is React Based framework with server side rendering capability.
 - [Styled Components](https://styled-components.com/) — CSS-in-JS library built for React.
 - [React Icons](https://react-icons.github.io/react-icons/) — SVG React icons of popular icon packs using ES6 imports.
-- [GitHub REST API](https://docs.github.com/en/rest) — GitHub REST API is used to fetch data from GitHub.
+- [GitHub GraphQL API](https://docs.github.com/en/rest) — GitHub GraphQL API is used to fetch data from GitHub.
+- [DEV REST API]() — DEV REST API is used to fetch data from Dev.to.
 
 ## Pre-requisites
 
